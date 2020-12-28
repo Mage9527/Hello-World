@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>龍之空</title>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{height:100%}
+			.header{overflow:hidden;}
+			table,iframe{float:right;}
+			/*2d效果*/
+			.zhong{float:left;}
+			.translate:hover{transform:translateX(1800px);transition:all 15s;}
+			.scale:hover{transform:scale(2);transition:all 3s;}
+			.rotate:hover{transform:rotate(10000deg);transition:all 15s;}
+			.skew:hover{transform:skew(10deg,10deg);transition:all 3s;}
+			.zonghe:hover{transform:rotate(100deg) skew(10deg,10deg) scale(2) translateX(20px);transition:all 3s;}
+			/*3d效果*/
+			span[class^="b"]{float:left;}
+			.2Dziti{transform-style:preserve-3d;perspective:200px;}
+			.box4{display:block;transition:all 5s;}
+			.box4:hover{transform:rotateX(100deg);}
+			/*方盒*/ 
+			ul li {
+				list-style:none;
+			}
+			.box2{
+				width:200px;
+				height:200px;
+				margin:0 auto;
+				position:relative;
+				perspective:800px;
+			}
+			.box2 ul{
+				width:150px;
+				height:150px;
+				position:absolute;
+				left:0;right:0;top:0;bottom:0;
+				margin:auto;
+				transform-style:preserve-3d;
+				transition:all 15s;	
+			}
+			.box2 ul:hover{transform:rotateX(720deg) rotateY(720deg);}
+			.box2 ul li {
+				position:absolute;
+				backface-visibility:hidden;
+			}
+			.box2 ul li:nth-child(1){transform:translateY(-63px) rotateX(90deg);}
+			.box2 ul li:nth-child(2){transform:translateY(63px) rotateX(-90deg);}
+			.box2 ul li:nth-child(3){transform:translateX(-63px) rotateY(-90deg);}
+			.box2 ul li:nth-child(4){transform:translateX(63px) rotateY(90deg);}
+			.box2 ul li:nth-child(5){transform:translateZ(63px);}
+			.box2 ul li:nth-child(6){transform:translateZ(-63px) rotateY(180deg);}
+			/*Teke my Head*/
+			.font1{
+				text-align: center;
+				background-color: #F3E576;
+				color:#0000FF;
+				font-family:"times new roman";
+			}
+			/*动画*/
+			.donghua{
+				width:1000px;
+				height:150px;
+				margin:0px;
+				padding:0px;
+				background-color:#00FF00;
+				position:relative;
+				animation:aa 8s linear infinite alternate;
+				display: flex;
+			}
+			@keyframes aa {
+				0%{left:0px;top:0px;}
+				100%{left:900px;top:0px;}
+			}
+		</style>
+	</head>
+	<body>
+		<h1 style="text-align: center;font-family:LiSu,KaiTi;color:red;border-style:ridge;border-color:#0000FF;border-width:10px;background-color:#CCCCCC;"><a href="../作业/作业14_37肖向阳人工智能一班/作业14_37肖向阳人工智能一班.html" target="_blank">龍之空</a></h1>
+		<div class="header">
+		<table border="0" width="780" margin="0" font-color="black" font-size="20">
+			<tr>
+				<td><a href="images/2 (101).jpeg" target="rose"><img src="images/2 (101).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (15).jpeg" target="rose"><img src="images/2 (15).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (103).jpeg" target="rose"><img src="images/2 (103).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (11).jpeg" target="rose"><img src="images/2 (11).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (112).jpeg" target="rose"><img src="images/2 (112).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (127).jpeg" target="rose"><img src="images/2 (127).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (95).jpeg" target="rose"><img src="images/2 (95).jpeg" width="120" height="150"></a> </td>
+			</tr>
+			<tr>
+				<td><a href="images/2 (143).jpeg" target="rose"><img src="images/2 (143).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (152).jpeg" target="rose"><img src="images/2 (152).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (162).jpeg" target="rose"><img src="images/2 (162).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (17).jpeg" target="rose"><img src="images/2 (17).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (20).jpeg" target="rose"><img src="images/2 (20).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (30).jpeg" target="rose"><img src="images/2 (30).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/1 (162).jpeg" target="rose"><img src="images/1 (162).jpeg" width="120" height="150"></a></td>
+			</tr>
+			<tr>
+				<td><a href="images/1 (161).jpeg" target="rose"><img src="images/1 (161).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (135).jpeg" target="rose"><img src="images/2 (135).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (138).jpeg" target="rose"><img src="images/2 (138).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (128).jpeg" target="rose"><img src="images/2 (128).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/1 (166).jpeg" target="rose"><img src="images/1 (166).jpeg" width="120" height="150"></a> </td>
+				<td><a href="images/2 (92).jpeg" target="rose"><img src="images/2 (92).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (56).jpeg" target="rose"><img src="images/2 (56).jpeg" width="120" height="150"></a></td>
+			</tr>
+			<tr>
+				<td><a href="images/2 (1).jpeg" target="rose"><img src="images/2 (1).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (121).jpeg" target="rose"><img src="images/2 (121).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (104).jpeg" target="rose"><img src="images/2 (104).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (142).jpeg" target="rose"><img src="images/2 (142).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (113).jpeg" target="rose"><img src="images/2 (113).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (129).jpeg" target="rose"><img src="images/2 (129).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (96).jpeg" target="rose"><img src="images/2 (96).jpeg" width="120" height="150"></a> </td>
+			</tr>
+			<tr>
+				<td><a href="images/2 (142).jpeg" target="rose"><img src="images/2 (142).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (153).jpeg" target="rose"><img src="images/2 (153).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (163).jpeg" target="rose"><img src="images/2 (163).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (18).jpeg" target="rose"><img src="images/2 (18).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (21).jpeg" target="rose"><img src="images/2 (21).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (31).jpeg" target="rose"><img src="images/2 (31).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/1 (160).jpeg" target="rose"><img src="images/1 (160).jpeg" width="120" height="150"></a></td>
+			</tr>
+			<tr>
+				<td><a href="images/2 (139).jpeg" target="rose"><img src="images/2 (139).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (137).jpeg" target="rose"><img src="images/2 (137).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (134).jpeg" target="rose"><img src="images/2 (134).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (126).jpeg" target="rose"><img src="images/2 (126).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/1 (167).jpeg" target="rose"><img src="images/1 (167).jpeg" width="120" height="150"></a> </td>
+				<td><a href="images/2 (3).jpeg" target="rose"><img src="images/2 (3).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (4).jpeg" target="rose"><img src="images/2 (4).jpeg" width="120" height="150"></a></td>
+			</tr>
+			
+			<tr>
+				<td><a href="images/2 (2).jpeg" target="rose"><img src="images/2 (2).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (5).jpeg" target="rose"><img src="images/2 (5).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (6).jpeg" target="rose"><img src="images/2 (6).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (7).jpeg" target="rose"><img src="images/2 (7).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (8).jpeg" target="rose"><img src="images/2 (8).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (9).jpeg" target="rose"><img src="images/2 (9).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (29).jpeg" target="rose"><img src="images/2 (29).jpeg" width="120" height="150"></a></td>
+			</tr>
+			<tr>
+				<td><a href="images/2 (24).jpeg" target="rose"><img src="images/2 (24).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (12).jpeg" target="rose"><img src="images/2 (12).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (13).jpeg" target="rose"><img src="images/2 (13).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (27).jpeg" target="rose"><img src="images/2 (27).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (26).jpeg" target="rose"><img src="images/2 (26).jpeg" width="120" height="150"></a> </td>
+				<td><a href="images/2 (16).jpeg" target="rose"><img src="images/2 (16).jpeg" width="120" height="150"></a></td>
+				<td><a href="images/2 (17).jpeg" target="rose"><img src="images/2 (17).jpeg" width="120" height="150"></a></td>
+			</tr>
+		</table>	
+		<iframe src="images/2 (24).jpeg" height="1245" width="1000" name="rose" scrolling="no" frameborder="0"></iframe>
+		</div>
+		<div><br /><hr /></div>
+		<div class="zhong">
+			<div>
+				<b>输入文本框<input type="text" id="fz" /></b><button onclick="document.getElementById('mubiao').value=document.getElementById('fz').value;">单击将此内容复制到目标框</button>
+				<b>目标文本框<input type="text" id="mubiao" />&nbsp;&nbsp;&nbsp;&nbsp;<a href="https:baidu.com" target="_blank" />百度一下</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tiaozhuan" />点我到底部</a></b>
+			</div>
+			<br />
+			<div>
+				<h1 class="2Dziti">
+					<span class="box">移动<img src="images/2 (129).jpeg" width="150" height="200" class="translate" /></span>
+		        	<span class="box">旋转<img src="images/2 (130).jpeg" width="150" height="200" class="rotate" /></span>
+			        <span class="box">缩放<img src="images/2 (124).jpeg" width="150" height="200" class="scale" /></span>
+			        <span class="box">扭曲<img src="images/2 (105).jpeg" width="150" height="200" class="skew" /></span>
+			        <span class="box">综合<img src="images/2 (38).jpeg" width="150" height="200" class="zonghe" />3D</span>
+			        <span class="box4"><img src="images/2 (100).jpeg" width="150" height="200" class="3Dxiaoguo" /></span>
+					<span class="box2">
+        				<ul>
+        					<li><img src="images/1 (158).jpeg" width="125" height="125" /></li>
+        					<li><img src="images/1 (159).jpeg" width="125" height="125" /></li>
+        					<li><img src="images/1 (160).jpeg" width="125" height="125" /></li>
+        					<li><img src="images/1 (161).jpeg" width="125" height="125" /></li>
+        					<li><img src="images/1 (166).jpeg" width="125" height="125" /></li>
+        					<li><img src="images/1 (168).jpeg" width="125" height="125" /></li>
+        				</ul>
+        			</span>
+        			<span class="box3"><img src="images/1.jpeg" width="400" height="200" /></span>
+				</h1>
+			</div>
+		</div>
+		<div align="center"><h1 class="font1">Take my Hand</h1></div>
+		<hr />
+		<div class="donghua">
+			<img src="images/1 (168).jpeg" width="100" height="150" />
+			<img src="images/1 (160).jpeg" width="100" height="150" />
+			<img src="images/1 (161).jpeg" width="100" height="150" />
+			<img src="images/1 (162).jpeg" width="100" height="150" />
+			<img src="images/1 (166).jpeg" width="100" height="150" />
+			<img src="images/1 (167).jpeg" width="100" height="150" />
+			<img src="images/1 (158).jpeg" width="100" height="150" />
+			<img src="images/1 (159).jpeg" width="100" height="150" />
+			<img src="images/2 (103).jpeg" width="100" height="150" />
+			<img src="images/2 (110).jpeg" width="100" height="150" />
+		</div>
+		<div></div>
+	</body>
+</html>
