@@ -1,0 +1,94 @@
+
+* {
+	padding:0;
+	margin:0;
+	}
+.container {
+	
+	/*弹性布局水平居中*/
+	
+	display: flex;
+	
+	justify-content: center;
+	
+	align-items: center;
+	
+	/*让子元素垂直排列*/
+	
+	flex-direction: column;
+	
+	/*宽度占浏览器可视窗口总宽度, 高度占浏览器可视区域总高度*/
+	
+	width: 100vm;
+	
+	height: 100vh;
+	
+	background-color: #000;
+}
+.container a {
+	
+	/*相对定位*/
+	
+	position: relative;
+	
+	/*将a这个行内块元素转为块级元素不然无法设置宽高*/
+	display: block;
+	width: 140px;
+	height: 60px;
+	/*行高*/
+	line-height: 60px;
+	text-align: center;
+	margin: 40px;
+	color: aqua;
+	font-size: 20px;
+	/*取消下划线*/
+	text-decoration: none;
+	/*加一下过渡事件*/
+	transition: all 0.3s ease-in-out;
+	/*hue-rotate是颜色滤镜,可以加不同的度数来改变颜色
+	这里用calc自动计算的方法,还有var函数来调用我们给每一个a设置的不同的属性值1~5,然后分别乘以60度,就能分别得到不同的度数*/
+	filter: hue-rotate(calc(var(--i)*60deg));
+}
+.container a::before,
+.container a::after {
+	/*将两个伪元素的相同部分写在一起*/
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border: 2px solid aqua;
+	/*最后的0.3是延迟时间;*/
+	transition: all 0.3s ease-in-out 0.3s;
+}
+.container a::before {
+	top: 0;
+	left: 0;
+	/*删除左边的伪元素的右和下边框*/
+	border-right: 0;
+	border-bottom: 0;
+}
+.container a::after {
+	right: 0;
+	bottom: 0;
+	/*删除伪元素的上边和左边的边框*/
+	border-top: 0;
+	border-left: 0;
+}
+.container a:hover {
+	background-color: aqua;
+	color: #000000;
+	/*加个发光效果和下面的倒影*/
+	box-shadow: 0 0 50px aqua;
+	/*belw是下倒影 1px是倒影的元素相隔的距离最后是个渐变的颜色*/
+	-webkit-box-reflect: below 1px
+			linear-gradient(transparent,rgba(0,0,0,0.3));
+	/*设置一下延迟时间*/
+	transition-delay: 0.4s;
+}
+/*在设置两条线的变化,总体来说四条各个方向的,只需要改变一下两个伪元素的宽度和高度*/
+.container a:hover::before,
+.container a:hover::after {
+	width: 138px;
+	height: 58px;
+	transition-delay: 0s;
+}
