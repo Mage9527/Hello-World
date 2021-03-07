@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>函数的参数及返回值</title>
+		<script>
+			function fun(num1,num2){
+				var sum = num1+num2;
+				//document.write(sum);
+				return sum;//return返回值
+			}
+			var s = fun(1010,2010);
+			if(s>10)
+			document.write("hh")
+			
+/*			function 函数名(参数...){
+				return 值;
+			}
+*/			
+//			自定义函数的考虑方式：1、是否需要返回值   2、是否需要参数
+//			求两个是数中的最大值
+			function getMax(num1,num2){
+				return num1>num2?num1:num2;
+			}
+			
+			//判断两个数是否相等
+			function isEqual(n1,n2){
+				return n1 == n2;
+			}
+			//打印一个五行五列的矩形
+			function rectangle(){
+				for(var i=1;i<=5;i++){
+					for(var j=1;j<=5;j++)
+					document.write("*")
+				document.write("<br/>");
+				}
+			}
+			rectangle();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

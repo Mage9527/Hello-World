@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 dowhile循环
+			 【格式】
+			 do{
+			 	循环语句；
+			 }while(表达式)；
+			 【注】
+			 1、最后的分号不要忘记
+			 2、循环条件中使用的变量需要经过初始化。
+			 3、循环体中，应有结束的循环的条件，否则会造成死循环。
+			 while循环和do_while循环的区别
+			 1、while循环是先判断表达式，然后再去执行循环语句。
+			 2、dowhile循环先去执行一次循环语句，然后再去判断一次表达式。
+			 
+			var i = 1;//用于累加的中间量
+			var sum = 0;//用于累加的和
+			do{
+				sum += i;
+				i++;
+			}while(i <= 100);
+			alert(sum);//5050
+			*/
+			
+			/*
+			 * for循环
+			 * 【格式】
+			 * 		for(表达式1;表达式2;表达式3;){
+			 * 			循环语句;
+			 * 		}
+			 * 	【执行顺序】
+			 * 		1、先求解表达式1(只求一次)
+			 * 		2、求解表达式2，若其值为真(非0)
+			 * 		则执行for语句中的循环语句，然后再去求解表达式3；
+			 * 		在求解表达式2，若为假，则结束循环。
+			 * 【注】一般情况下，使用for循环比较多。
+			 
+			var sum = 0;
+			for(var i = 1; i <= 100; i++){
+				sum += i;
+			}
+			alert(sum);
+			
+			* 
+			*/
+			
+			
+			/*
+			 	【注】一般情况下，循环i从0开始
+			 	【注】循环中间的变量，命名 i j k
+			 */
+			//打印三角形
+			//第一层循环，决定打印了几行。
+/**/		for(var i = 1; i < 10; i++){
+				//每一行打印几个星，对应行和打印的星一致
+				for(var j = 1; j <= i; j++){
+					document.write("*");
+				}
+				document.write("<hr/>");
+			}
+			
+			for(var i = 1; i < 10; i++){
+				//每一行的空格，行数减当前行打印的星的个数
+				for(var k = 1; k < 10 - i - 1; k++){
+					document.write("&ensp;");
+				}
+				//每一行打印几个星，对应行和打印的星一致
+				for(var j = 1; j <= i; j++){
+					document.write("*");
+				}
+				document.write("<br />");
+			}		
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

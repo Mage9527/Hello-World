@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>多重的else-if</title>
+		<script>
+			//已知一个成绩，根据成绩的输出等级	大于90--A	80-90--B.....
+			/*
+			 结构：
+				 if(条件)
+				 语句;
+				 else
+				 if(条件)
+				 语句;
+				 else
+				 if(条件)
+				 语句;
+				 	....
+				 else
+				 语句;
+			 */
+			var score = 75;
+			if(score>90)
+			alert("A");
+			else
+			if(score>=80)
+			alert("B");
+			else
+			if(score>=70)
+			alert("C");
+			else
+			if(score>=60)
+			alert("D");
+			else
+			alert("挨揍");
+		</script>
+			
+	</head>
+	<body>
+	</body>
+</html>

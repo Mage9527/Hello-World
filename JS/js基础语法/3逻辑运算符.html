@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>逻辑运算符</title>
+		<script>
+			
+			//逻辑运算符：&&（与）	||（或）		！（非）
+			var h5 = 56,js = 67;
+			var r = h5>=60 && js>=60;
+			document.write(r<br/>);//flase	 
+			//true&&true=true
+			//true&&flase=flase
+			//flase&&true=flase
+			//flase&&flase=flase
+			//&&运算符只有两个表达式的值是 true ，才是true。
+			
+			
+			var h5 = 56,js = 67;
+			var r2 = h5>=60 || js>=60;
+			document.write(r2<br/>);//true
+			
+			//true||true=true
+			//true||flase=true
+			//flase||true=true
+			//flase||flase=flase
+			//||运算符只有两个表达式的 值 是flase ，才得出flase
+			 
+			
+			var h5 = 56,js = 67;
+			var r3 = !(h5>60);
+			document.write(r3<br/>);//true
+			// !运算符 可以 把 真  变成 假， 假变成真
+			//判断一个年份是否是闰年（能被4整除但是不能被100整除，或者能被400整除）
+			var year = 2011;
+			var sesult3 = year%4==0 && year%100!=0 || year%400==0?"闰年":"平年";
+			document.write(sesult3<br/>)
+			
+			
+			
+			//逻辑运算符注意事项
+			var a = 5,b = 6;
+			document.write(a<1 && ++b>5<br/>);//逻辑与得出左边的结果为flase，就不会再去计算右边的表达式了，所以b没有改变
+			document.write(b<br/>);// 6 运算符++的加一操作，没有改变b的值。
+			
+			document.write(a>1 || ++b>5<br/>);//逻辑或得出左边的结果为true，就不会再去计算右边的表达式了
+			document.write(b<br/>);//还是6，同上
+			
+			document.write(3&&6<br/>);//6，因为都是true，所以进行了比大小，所以得出6
+			document.write(0&&6<br/>);//0，因为0是flase，所以不会去计算右边了
+			//  "" 、 0相当于flase，非空字符串 、 非0相当于true。
+			document.write("hello"&&"world"<br/>);//"world"
+			document.write(""&&"hello"<br/>);//空白的 
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

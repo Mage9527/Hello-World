@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var a = "abc";
+			var ss = new String("abc");
+			document.write(typeof a +"===="+typeof ss);
+			document.write("<br>",a==ss);
+			document.write("<br>",a===ss);
+			document.write("<br>",ss,length);
+			document.write("<br>",a,length,"<br>");
+			
+			//打印字符串中每个字符对应的编码String.CharCodeAt()
+			var s = "abcdefghijklmn ABCDEFG 缘之空!";
+			for(var i = 0;i < s.length;i++)
+			{
+				document.write("下标为"+i+"的字符是:"+s.charAt(i)+"---->"+"该字符的编码是"+s.charCodeAt(i)+"<br>")
+			}
+			
+			//String.fromCharCode() : 根据编码生成字符串
+			var str = String.fromCharCode(65,70,32536)
+			document.write(str);
+			
+			
+			var sss = "abtttcdetttfgttt";
+			//indexOf(str): 默认返回在字符串中第一次出现的索引
+			var index = sss.indexOf("ttt");
+			document.write("<br>",index);
+			
+			//indexOf(str,postion):返回从position指定的位置开始在字符串中最后一次出现的索引
+			var index2 = sss.indexOf("ttt",8);
+			document.write("<br>",index2);
+			
+			//lastIndexOf(str):返回在字符串中最后一次出现的索引	
+			var index3 = sss.lastIndexOf("ttt");
+			document.write("<br>",index3,"<br>");
+			
+			//不存在时返回-1
+			
+			
+			//练习：验证邮箱是否合法
+			var email= "zhangwei.hh@qq.com";//含有一个@符号，@符号在。前边
+			
+			if(email.indexOf("@")>0){
+				//判断是否只含有一个@符号
+				if(email.indexOf("@")==email.lastIndexOf("@")){
+					//@符号是否在第一个.的前边，且有两个符号挨着
+					if(email.indexOf("@")<email.indexOf(".",email.indexOf("@"))){
+						document.write("合法");
+					}
+					else
+						document.write("@不在前边，不合法")
+				}else{
+					document.write("多个@，不合法");
+				}
+			}else
+			   document.write("没有@")
+			   
+			//字符串的截取
+			var ss = "hello world 努力学习 abcdefg"
+			var s = ss.substr(5);
+			document.write("<br>",ss);
+			var strl = ss.substr(5,5);
+			document.write("<br>",strl);
+			
+			//subString(index1,index2)第一个参数表示截取的起始索引
+			//第二个参数表示截取的结束位置(不包含结束位置上的字符，到结束位置的前一位)
+			var str2 = ss.substring(5,5);
+			document.write("<br>",str2);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

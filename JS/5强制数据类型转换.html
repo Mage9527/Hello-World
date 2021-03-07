@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 var tmp = 1 + ture;//如果ture换成flase，会得出1
+			 alert(tmp);//得出2
+			 布尔值: true=>1  flase=>0
+			 特殊数据类型中：null=>0		undefined=>NaN
+			 总结：任何其他数据类型除了和字符串做相加操作外，与数字类型做算术运算的时候，其他数据类型都会自动的转换成数字。
+			 */
+		
+			/*
+			 var tmp = Boolean(1);//true
+			 var tmp = Boolean(0);//flase
+			 var tmp = Boolean(-1);//true
+			 
+			 var tmp = Boolean("");//flase
+			 var tmp = Boolean("hello");//true
+			 
+			 var tmp = Boolean(null);//flase
+			 var tmp = Boolean(undefined);//flase
+			 【注】通过方法  Boolean() 进行 强制 数据数据类型转换。
+			 【作用】将别的数据类型强制转换成布尔值。
+			 结论：
+			 	1、数字0转成布尔值为flase，所有非0的数字转换成布尔值都为true。
+			 	2、空字符串转成布尔值为flase，所有非空字符串转换成布尔值为true。
+			 	3、null和undefinied转成布尔值都是flase。
+			 */
+			
+			/*
+			 var tmp = Number(ture);//1
+			 
+			 var tmp = Number("20a");//NaN
+			 var tmp = parseInt("20a");//20
+			 var tmp = parseInt(3.15);//3
+			 
+			 var tmp = pareFLort(3.15);//3.15
+			 Number()	将别的数据类型转换成数字
+			 			1、布尔值  true => 1		false => 0
+			 			2、特殊数据类型 null => 0		undefinied => NaN
+			 			3、字符串 纯数字的字符串 => 对应数字，否则非纯数字字符串 => NaN
+			 parseInt()		兼容number功能，取整
+			 parseFLoat()		取浮点数(浮点数 => 带小数的数字)
+			 					可以将别的数据类型转换成带小数的数据
+			 */
+			
+			/*
+			 var tmp = 1 / 0;//Infinity( => 无穷大)
+			 var tmp = -1 / 0;//-Imfinity( => 无穷小) 
+			 alert(tmp);
+			 */
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

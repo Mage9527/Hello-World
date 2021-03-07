@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <title>while循环</title>
+    <script>
+        //循环解决的是具备重复性的问题
+ /*
+        while(循环的条件)
+        {
+            需要重复执行的语句(循环体);
+        }
+        工作原理：先判断 条件 的 结果 是否为真，如果条件为 真 则执行循环体一次，然后在判断条件是否为 真，如果为 真 则在执行循环体， 如此反复，
+        直到条件为假时循环结束，循环结束后会继续执行下边的语句。
+        
+        //显示"hello world"5次
+        var i = 1;
+        while(i<=5)
+        {
+            document.write("hello world<br/>");
+            i++;
+        }
+
+        //求1-10的累加和
+        var num = 1,sum = 0;
+        while(num<=10)
+        {
+            sum = sum + num;
+            num++;
+        }
+        document.write(sum);
+*/
+        //统计1-100之间既能被3整除也能被5整除的数的个数---计数器思想
+        var count = 0,num = 1;
+        while(num<=100)
+        {
+            if(num%3==0 && num%5==0)
+            count++;
+            num++
+        }
+        document.write("count="+count);
+    </script>
+</html>
