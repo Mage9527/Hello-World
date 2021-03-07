@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			.header{width:960px;height:100px;background-color:#f00;margin:0 auto;}
+			nav{height:60px;background-color:#000000;}
+			.layout{width:960px;background-color:#eee;margin:0 auto;overflow:hidden;}/*overflow:hidden(清除高度塌陷)*/
+			  .left{width:250px;min-height:600px;background:#0f0;float:left;}
+			  .right{background-color:#00f;overflow:hidden;}
+			  	.box1{width:200px;height:300px;background-color:#0ff;float:left;margin-right:20px;margin-bottom:20px;}
+			mark{color:#FFC0CB;}
+			.footer{width:960px;height:80px;background-color:#000;margin:0 auto;}
+		</style>
+	</head>
+	<body>
+		<!--
+        	作者：offline
+        	时间：2020-12-18
+        	描述：
+        	*语法<header></header>
+        	说明：header元素表示页面中一个内容区块或者整个页面的标题。
+        	
+        	*语法：<footer></footer>
+        	说明：footer元素表示整个页面或者页面中的一个内容区块的注脚。
+        	一般来说，他会包含创作者的姓名、创作日以及创作者的联系信息
+        	
+        	*语法：<article></article>
+        	说明：article元素表示页面中的一块与上下文不相关的独立内容，比如博客中的一篇文章或者报纸中的一篇文章。
+        	
+        	*语法：<aside></aside>
+        	说明：aside元素表示article元素的内容之外的，与article元素的内容相关的辅助信息。
+        	
+        	*语法：<section></section>
+        	说明：section元素表示页面中的一个内容区块，比如章节、页眉、页脚或者页面中的其他重要部分。它可以与h1~h6等元素结合起来使用，标示文档结构。
+        	
+        	*语法：<nav></nav>
+        	说明：nav元素表示页面中导航链接的部分。
+        	
+        	*语法：<figure></figure>
+        	说明：
+        		figure元素表示一段独立的流内容，一般表示文档主体流内容中的一个独立单元。使用  figcaption 元 素为figure元素   添加标题
+        		figure是一种元素的组合，带有可选标题。用来表示网页上一块独立的内容。
+        		figcaption表示figure的标题。从属于figure，并且figure中只能放置一个figcaption
+        	
+        	*语法：<mark></mark>
+        	说明：mark元素主要用来在视觉上向用户呈现那些需要突出或者高亮显示的文字。
+        		 mark元素的一个比较典型的应用就是在搜索结果中向用户高亮显示搜索关键词。
+        -->	
+        <div class="header"></div><!--可以使用<header></header>元素取代-->
+        <nav></nav>
+        <div class="layout">
+        	<div class="left">我是左栏</div><!--可以使用aside元素替代-->
+        	<div class="right"><!--可以使用article元素替代-->
+        		<div class="box1"><!--可以使用section元素替代-->
+        			<dl><!--dl、dt可以替代，使用figure包裹图片和figcaption-->
+        				<dt><img src="../images/2 (1).png" /></dt>
+        				<dd><mark>艾米莉亚</mark></dd><!--使用figcaption替代-->
+        			</dl>
+        		</div>
+        		<div class="box1"></div><!--可以使用section元素替代-->
+        		<div class="box1"></div><!--可以使用section元素替代-->
+        		<div class="box1"></div><!--可以使用section元素替代-->
+        		我是右栏
+        	</div>
+        </div>
+        <div class="footer">123456789</div><!--可以使用<footer></footer>元素取代-->
+	</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>弹性盒</title>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			.box{border:1px #f00 solid;display:flex;justify-content:space-around;}
+			section{width:50px;height:50px;border:1px #00f solid;}
+		</style> 
+	</head>
+	<body>
+		<!--
+        	作者：offline
+        	时间：2020-12-26
+        	描述：弹性盒
+        	弹性盒
+        	弹性盒是css3的一种新的布局方式。
+        	css3弹性盒（Flexble Box或flebox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当行为的布局方式。
+        	引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的子元素进行排列、对齐和分配空白空间。
+        	弹性盒子由弹性容器（Fle container）和弹性子元素（Flex item）组成。
+        	弹性容器通过设置display属性的值为flex将其定义为弹性容器。
+        	弹性容器内包含了一个或多个弹性子元素。
+        	
+        	主轴（main axis）：伸缩容器的主轴，伸缩项目主要沿着这条轴进行排列布局。他不一定是水平的；这主要取决于"justify-content"属性。
+        	主轴起点（main-start）和主轴终点（main-end）：		伸缩项目放置在伸缩容器内从主轴起点（main-start）向主轴终点（main-start）方向。
+        	主轴尺寸（main-size）：	伸缩项目在主轴方向的宽度或高度就是主轴的尺寸。伸缩项目主要的大小属性要么是宽度，要么是高度属性，由哪一个对着主轴方向决定。
+        	
+        	侧轴（cross axis）：	垂直于主轴称为侧轴。他的方向主要取决于主轴方向。
+        	侧轴起点（cross-start）和侧轴终点（cross-end）：	伸缩行的配置从容器的侧轴起点边开始，往侧轴终点边结束。
+        	侧轴尺寸（cross size）：伸缩项目的在侧轴方向的宽度或高度就是项目的侧轴长度，伸缩项目的侧轴长独属性是[width]和[height]属性，由哪一个对着侧轴方向决定。
+        	
+        	由于flexbox是一个整体模块，而不是单一的一个属性，它涉及到了很多的东西，包括他的整个属性集。他们之中有一些是在父容器上设置，而有一些则是在子容器上设置。
+        	以下属性设在容器上：diaplay		flex-direction		flex-wrap		flex-flow
+        					  justify-content			align-items			align-content
+        	
+        	语法：display:flex/inline-flex;
+        	说明：弹性容器	通过设置display属性的值为flex或inline-flex将其定义为弹性容器。
+        	flex：将对象作为弹性伸缩盒展示。
+        	inline-flew：将对象作为内联块级弹性伸缩盒展示。
+        	
+        	语法：flew-direction:row/row-reverse/column/column-reverse;
+        	说明：设置伸缩盒主轴的     起点和终点位置    ，子元素依然按照从主轴起点向终点方向排列。
+        	row：默认位置，主轴横向，起点在左侧，终点在右侧。
+        	row-reverse：主轴横向反转，起点在右侧，终点在左侧。
+        	column：主轴纵向，起点在上方，终点在下方。
+        	column-reverse：主轴纵向反转，起点在下方，终点在上方。
+        	
+        	flex-wrap:nomrap/wrap/wrap-reverse;
+        	说明：设置或检索伸缩盒对象的子元素超出父容器时是否       换行。
+        	nowrap：当子元素溢出父容器时不换行。
+        	wrap：当子元素溢出父容器时自动换行。
+        	wrap-reverse：反转wrap排列。
+        	
+        	语法：justify-content:flex-start/flex-end/center/space-between/space-around;
+        	说明：设置或检索弹性盒子元素在主轴方向上的     对齐方式    。
+        	当弹性盒里一行上的所有子元素都不能伸缩或已经达到最大值时，这一属性可协助对多余的空间进行分配。
+        	当元素溢出某行时，这一属性同样会在对齐上进行控制。
+        	space-between：弹性盒子元素会    平均分布      在行里。
+        	space-around：弹性盒子元素会平均地分布在行里，   两端保留子元素与子元素之间 间距大小的一半。
+        -->
+        <div class="box">
+        	<section>1</section>
+        	<section>2</section>
+        	<section>3</section>
+        	<section>4</section>
+        	<section>5</section>
+        </div>
+	</body>
+</html>

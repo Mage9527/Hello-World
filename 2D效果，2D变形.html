@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{height:10000px;}
+			.box{width:100px;height:100px;background-color:#f00;
+				transform:translate(200px,100px) scale(2,2) skew(50deg,50deg);
+				margin:100px auto;}
+			.box2{width:100px;height:100px;background-color:#0f0;margin:200px auto;transform-origin:left top;}
+			.box:hover{transform:rotate(45deg);}
+			.box2:hover{transform:rotate(45deg);}
+			
+			div{width:100px;height:100px;border:1px #f00 solid;margin:100px auto;}
+			.box3,.box4,.box5,.box6,.box7{transition:all 1s;}
+			div:nth-of-type(3):hover{transform:translateX(500px);}
+			div:nth-of-type(4):hover{transform:rotate(100deg);}
+			div:nth-of-type(5):hover{transform:scale(10);}
+			div:nth-of-type(6):hover{transform:skew(100deg,30deg);}
+			div:nth-of-type(7):hover{transform:rotate(100deg) skew(1000deg,1000deg) scale(2) translateX(200px);}
+		</style>
+	</head>
+	<body>
+		<!--
+        	作者：offline
+        	时间：2020-12-20
+        	描述：
+        	2、2D变形
+        	transform字面上就是变形，改变的意思。
+        	在CSS3中transform主要包括以下几种：旋转rotate、扭曲skew、缩放scale、和 移动translate 以及 矩阵变形matrix。
+        	
+        	语法：transform:none/rotate/scale/skew/translate/matrix;
+        	说明：none：表示不进行变换；
+        	可以同时对一个元素进行transform的多种属性操作，例如rotate、scale、translate三种，但transform中使用多个属性时却需要有空格隔开。
+        	
+        	旋转rotate
+        	rotate()：通过指定的角度参数对原元素指定一个2D rotation（2D旋转），需先有transform-origin属性的定义。
+        	transform-origin定义的是旋转的基点，其中angle是指旋转角度，如果设置的值为正数表示顺时针旋转，如果设置的值为负数，则表示逆时针旋转。
+        	如：transform:rotate(30deg);
+        	
+        	移动translate
+        	移动translate我们分为三种情况:
+        	translate(x,y)水平方向和垂直方向同时移动（也就是X轴和Y轴同时移动）；
+        	translateX(x)仅水平方向移动（X轴移动）；
+        	translateY(y)仅垂直方向移动（Y轴移动0;
+        	如：transform:translate(100px,20px);		transform:translateX(100px);		transform:translateY(20px);
+        	
+        	缩放scale
+        	缩放scale和移动translate时极其相似，他也具有三种情况：
+        	缩放(x,y)使元素水平方向和垂直方向同时缩放（也就是X轴和Y轴同时缩放）；
+        	scaleX(x)元素仅为水平方向缩放（X轴缩放）；
+        	scale(y)元素仅垂直方向缩放（Y轴缩放），但它们具有相同的缩放中心点和基数，其中心点就是元素的中心位置，缩放基数为1，如果其值大于1元素就放大，反之其值小于1，元素缩小。
+        	如：transform:scale(2,1.5);		transform:scaleX(2);		transform:scaleY(2);
+        	
+        	扭曲skew
+        	扭曲skew和translate、scale一样具有三种情况：skew(x,y)使元素在水平和垂直方向同时扭曲（X轴和y轴同时按一定的角度值就行扭曲变形）；
+        	SkewX(x)仅使元素在水平方向扭曲变形(X轴扭曲变形)；
+        	SkewY(y)仅使元素在水平方向扭曲变形(Y轴扭曲变形)。
+        	如：transform:skew(30deg,10deg);			transform:skewX(30deg);		transform:skewY(10deg);
+        	
+        	改变元素基点transform-origin
+        	transform-origin主要作用是在进行transform动作之前可以改变元素的基点位置，因为元素默认基点就是其中心位置，
+        	没有使用transform-origin改变元素基点位置的情况下，transform进行的rotate，translate，scale，skew，matrex都是以元素自己中心位置进行变化的。
+        	但有时候需要在不同的位置对元素进行这些操作，那么就可以使用transform-origin来对元素进行基点位置改变，使元素基点不在是中心位置，以达到需要的基点位置。
+        	语法：transform-origin:x-axis y-axis;
+        	说明：默认点是元素的中心点。
+        	其中X和Y的值可以是百分值，em，px，其中X也可以是字符参数值left，center，right；Y和X一样除了百分值外还可以设置字符值top，center，bottom，这个看上去有点像
+        	background-position设置一样。
+        -->
+        <div class="box"></div>
+        <div class="box2"></div>
+        <hr />
+        <div class="box3">2D平移</div>
+        <div class="box4">2D旋转</div>
+        <div class="box5">2D缩放</div>
+        <div class="box6">2D扭曲</div>
+        <div class="box7">2D综合</div>
+	</body>
+</html>

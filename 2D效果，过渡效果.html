@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{width:100px;height:100px;background-color:#FF0000;transition-property:width,height,background-color;transition-duration:4s;transition-timing-function:ease-in-out;margin:0 auto;}
+			.box:hover{width:300px;height:300px;background-color:#0f0;}
+		</style>
+	</head>
+	<body>
+		<!--
+        	作者：offline
+        	时间：2020-12-20
+        	描述：
+        	1、CSS3过渡
+        	通过CSS3，我们可以在不使用Flash动画或JavaScript的情况下，当元素从一种样式变成另一种样式时为元素添加效果。
+        	IE10、Firefox、Chrome以及transition属性。
+        	Safari需要前缀-webkit-。
+        	IE9以及更早的版本，不支持transition属性。
+        	Chrome25以及更早的版本，需要前缀-webkit-。
+        		要实现这一点，必须规定两项内容：
+        		1规定你希望把效果添加到哪个CSS属性上
+        		2规定效果的时长
+        	下面列出了所有的转换属性：
+        		属性											描述
+        	transition							简写属性，用于在一个属性中设置中设置四个过渡属性。
+        	
+        	transition-property					规定应用过渡的CSS属性的名称。
+        	
+        	transition-duration					定义过渡效果花费的时间，默认是0.
+        	
+        	transition-timing-function			规定过渡效果的时间曲线，默认是“ease”
+        	
+        	transition-delay					规定过渡效果何时开始，默认是0.
+        	
+        	语法：transition-property:none/all/property;
+        	说明：transition-property属性规定应用效果的CSS属性的名称。当指定的CSS属性改变时，过渡效果将开始。
+        	none：没有属性会获得过渡效果。
+        	all：所有属性都将获得过渡效果。
+        	property：定义应用过渡效果的CSS属性名称列表，列表以逗号分隔。
+        	
+        	语法：transition-duration:time;
+        	说明：transition-duration属性规定完成过渡效果需要花费的时间，以秒货毫秒计算。
+        	time：规定完成过渡效果需要花费的时间，以秒或毫秒计。默认值时是0，意味着不会有效果。
+        	
+        	语法：transition-timing-function:linear/ease/ease-in/ease-out/ease-in-out/cubic-bezier(n,n,n,n);
+        	说明：transition-timing-function属性规定过渡效果的速度曲线。
+        	linear：规定以相同速度开始至结束的过渡效果。
+        	ease：规定慢速开始，然后变快，然后慢速结束的过渡效果。
+        	ease-in：规定以慢速开始的过渡效果。
+        	ease-out：规定以慢速结束的过渡效果。
+        	ease-in-out：规定以慢速开始和结束的过渡效果。
+        	cubic-bezier(n,n,n,n)：在cubin-bezier函数中定义自己的值。可能的值是0至1之间的数值。
+        	【对比网址】cubic-bezier.com
+        	
+        	语法：transition-delay:time;
+        	说明：transition-delay属性规定过渡效果何时开始。
+        	time：规定在过渡效果开始之前需要等待的时间，以秒或毫秒计。
+        -->
+        <div class="box"></div>
+	</body>
+</html>

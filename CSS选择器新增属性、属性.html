@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*语法1*/
+			img[title]{border:10px #FFC0CB solid;}
+			img[alt]{border:10px #000000 solid;}
+			/*语法2*/
+			input[type="text"]{width:300px;height:50px;border:5px #0000FF dashed;}
+			input[type="submit"]{width:300px;height:62px;background-color:#0000FF;color:#fff;border:none;}
+			
+			.box1{width:100px;height:100px;background-color:#FFC0CB;}
+			.box2{width:200px;height:200px;background-color:#FF0000;}
+			/*语法3*/
+			div[class~="layout"]{margin:0 auto;}
+			/*语法4*/
+			img[class|="a"]{border:5px #0000FF solid;}
+			/*语法5*/
+			img[class^="b"]{border:5px #008000 solid;}
+			/*语法6*/
+			img[class$="c"]{border:5px #685649 solid;}
+		</style> 
+	</head>
+	<body>
+		<!--
+        	作者：offline
+        	时间：2020-12-19
+        	描述：属性选择器
+        	1、属性选择器
+        	1语法：E[att]{sRules}
+        	说明：用于选取带有指定属性的元素。
+        	
+        	2语法：E[att="val"]{sRules}
+        	说明：用于选取带有指定属性和值的元素。
+        	
+        	3语法：E[att~="val"]{sRules}
+        	说明：用于选取属性值中包含指定词汇的元素。
+        	
+        	4语法：E[att|="val"]{sRules}
+        	说明：用于选取带有以指定值开头的属性值的元素，该值必须是整个单词。
+        	
+        	5语法：E[att^="val"]{sRules}
+        	说明：匹配属性值以指定值开头的每个元素。
+        	
+        	6语法：E[att$="val"]{sRules}
+        	说明：匹配属性值以指定值结尾的每个元素。
+        	
+        	7语法：E[att*="val"]{sRules}
+        	说明：匹配属性值中包含指定值的每个元素。
+        -->
+        <img src="../images/2 (10).jpeg" alt="你的名字" />
+        <img src="../images/2 (1).jpeg" title="艾米利亚" /> 
+        <!--语法2 -->
+		<p><input type="text" />
+		   <input type="submit" /></p>
+		<!--语法3 -->
+		<div class="box1"></div>
+		<div class="box2 layout"></div>
+		<!--语法4 -->
+		<img src="../images/2 (100).jpeg" class="a-img" />
+		<!--语法5 -->
+		<img src="../images/2 (101).jpeg" class="bimg" />
+		<!--语法6 -->
+		<img src="../images/2 (102).jpeg" class="abc" />
+		
+	</body>
+</html>

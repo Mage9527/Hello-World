@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3D效果2</title>
+		<style type="text/css">
+			/*.box{width:1000px;overflow:hidden;background-color:#eee;margin:0 auto;}
+			p{width:200px;height:200px;border:1px #000 solid;float:left;margin:50px;transform-style:preserve-3d;perspective:900px;}
+			span{display:block;width:200px;height:200px;background-color:rgba(255,0,0,.5);transition:all 3s;}
+			span:hover{transform:rotateX(45deg);}*/
+			*{margin:0;padding:0;}
+			ul li {
+				list-style:none;
+			}
+			.box{
+				width:600px;
+				height:600px;
+				background:#eee;
+				margin:0 auto;
+				position:relative;
+				perspective:800px;
+			}
+			.box ul{
+				width:300px;
+				height:300px;
+				position:absolute;
+				left:0;right:0;top:0;bottom:0;
+				margin:auto;
+				transform-style:preserve-3d;
+				transition:all 6s;	
+			}
+			.box ul:hover{transform:rotateX(180deg) rotateY(360deg);}
+			.box ul li {
+				width:300px;
+				height:300px;
+				text-align:center;
+				line-height:300px;
+				font-size:48px;
+				position:absolute;
+				backface-visibility: hidden;
+			}
+			.box ul li:nth-child(1){background:rgb(255,0,0,.5);transform:translateY(-150px) rotateX(90deg);}
+			.box ul li:nth-child(2){background:rgb(255,0,255,.5);transform:translateY(150px) rotateX(-90deg);}
+			.box ul li:nth-child(3){background:rgb(255,255,0,.5);transform:translateX(-150px) rotateY(-90deg);}
+			.box ul li:nth-child(4){background:rgb(0,0,0,.5);transform:translateX(150px) rotateY(90deg);}
+			.box ul li:nth-child(5){background:rgb(255,0,0,.5);transform:translateZ(150px);}
+			.box ul li:nth-child(6){background:rgb(0,255,0,.5);transform:translateZ(-150px) rotateY(180deg);}
+		</style>
+	</head>
+	<body>
+		<!--
+        	作者：offline
+        	时间：2020-12-24
+        	描述：
+        	语法：perspective-origin:x-axis y-axis;
+        	说明：定义元素所基于的X轴和Y轴。该属性允许你改变3D元素的底部位置。该属性的默认值为“50%50%”（也就是center）。
+        	他可以时长度值（以受支持的长度单位表示）、百分比或以下三个关键词之一：left（表示在包边框的X轴方向长度的0%），center（表示中间的点），或right(表示长度的100%)。
+        	第一个长度值指定于相对元素的包含框的X轴上的位置。
+        	第二个长度值指定相对于元素的包含框的Y轴上的位置。
+        	
+        	语法：backface-visibiliy:visible/hidden;
+        	说明：定义元素当不面向屏幕时是否可见。如果旋转元素不希望看到其背面时，该属性很有用。
+        	visible：为backface-visibiliy的默认值，表示反面可见
+        	hidden：表示反面不可见
+        -->
+		 <!--<div class="box">
+        	<p><span>X轴旋转</span></p>
+        	<p><span>Y轴旋转</span></p>
+        	<p><span>Z轴旋转</span></p>
+        	<p><span>Z轴旋转</span></p>
+        	<p><span>Z轴旋转</span></p>
+        	<p><span>Z轴旋转</span></p>
+        	<p><span>Z轴旋转</span></p>
+        	<p><span>Z轴旋转</span></p>
+        	<p><span>Z轴旋转</span></p>
+        	<p><span>Z轴旋转</span></p>
+        	<p><span>Z轴旋转</span></p>
+        	<p><span>Z轴旋转</span></p>
+     		</div>-->
+        <div class="box">
+        	<ul>
+        		<li>上</li>
+        		<li>下</li>
+        		<li>左</li>
+        		<li>右</li>
+        		<li>前</li>
+        		<li>后</li>
+        	</ul>
+        </div>
+	</body>
+</html>

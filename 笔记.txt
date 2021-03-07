@@ -1,0 +1,669 @@
+空格&nbsp;  小于号&lt;   大于号&qt；  单引号&apos； 注释:<!--内容-->   字符集<meta charset="utf-8" />
+
+
+有序列表:<ol type="" start="写数字">  自定义列表列表：<dl>                        段落标签：p  br换行   nobr不换行
+                         							<li></li>   <dt></dt>
+                        						 <li></li>	<dd></dd>
+												<dt></dt>
+						     					  <dd></dd>
+                                                                                         </dl>
+超链接：<a href="http://www.baidu.com" target="blank"  title="解释">百度一下</a>       
+字号h1-6   strong、b加粗   u斜线    	
+跳转： <a heaf="#target"></a><br />
+	  <a name="target"></a>
+<img src="../../(相对路径）ly.jpg"/ width="200" height="200" title="解释" alt="图片损坏">
+    widht宽 height高 title提示 
+    
+<！DOCTYPE html>
+  <body>
+		<table  border="1" cellspacing="0" cellpadding="0">
+			<tr><th>标题</th><th>标题</th></tr>
+			<tr><td>第一行，第一列</td><td>第一行，第二列</td></tr>
+			<tr><td>第二行，第一列</td><td>第二行，第二列</td></tr>
+		</table>
+   </body>
+   
+表单：	
+	例：<!DOCTYPE html>
+	<html>
+		<HEAD>
+			<meta charset="utf-8" />
+			<title></title>
+		</HEAD>
+		<body>
+			<form action="1.php" method="get" enctype="">
+			用户名：<input type="text" name="username" value="天王盖地虎"/>
+			密码:<input type="password" name="pass" placeholder="请输入密码"/>
+			<input type="submit" value="立即注册"/>
+			</form>
+		</body>
+	</html>
+form
+	action：你提交的地址
+	get：是通过url传参的，相对不安全，当你传输的时候会有长度限制
+	post：通过header头传输的，相对安全，当他传输的时候比get传的数据要多
+	enctype：编码类型，默认不用写		只有在上传文件的时候才指定该类型
+		
+    input type=
+				text//文本框
+				password//密码
+				submit//提示交按钮
+				value
+				placehlder 提示功能，当你在文本框输入东西的时候，提示消失
+
+form:
+		radio 单选按钮 	如果你想实现只能选中一个的时候加上name name值一样
+		
+		checkbox 复选框 	可以选中多个  	 默认选中的话 是加一个checked
+	
+		hidden 隐藏表单  用途是当数据没必要让用户看见，但是掩们后台还要用这个数据的时候，就去隐藏的去传
+		file 上传文件
+		reset重置按钮
+	    select：<option></option>
+	   	textarea：
+		cols
+		rows（双标签，挨着写）
+		div      span
+
+块，行内块，行内：
+				块：div 	ul 	p 	ol 	dl 	hr	 h1-h6 			特点：1、可以设置宽高（默认值是100%）	2、独占一行		3、不受空格影响
+				行内：span 	em 	storng	 b	 i 	u 			特点：不支持宽高 、共处一行、 受空格影响
+				行内块：img 	input 							特点：支持宽高 、共处一行 、受空格影响
+链接方式：行内样式表 写在标签里面的 style=“width”。。。。
+内联样式表：<style>css代码</style>		
+外联样式表：<link rel="stylesheet" type="text/css" href="css文件地址"/>
+
+
+定位
+position:	
+			相对定位
+			relative
+					1 不改变元素的类型
+					2 参照物是自己本身
+					作用：是给绝对定位当父级用
+
+			绝对定位
+			absolute
+					1 元素变成块
+					2 默认的参照物是body.如果父级给了相对定位，他的参照物是父级
+		
+			固定定位
+			position：fixed;
+					1 参照物是屏幕可视区
+					2 元素变成块
+			
+			 注意: 你加了定位就要写top left right bottom
+	      
+	      
+标签类型相互转换：
+				display：inline//转换成行为
+				display：block//转换成块
+				display：inline-block；//行内块(他比较常用）	
+				display：none//不显示
+				
+				
+浮动：
+	作用：放一行
+	特点：1，元素变成块2，顶对齐
+	王者定律（切记):加浮动就要给清浮动，否则会造成塌陷。
+	
+
+清除浮动方式:
+	1 给父级加overflw:hidden
+	2 给你需要清楚浮动的元素的下面加上一个空白的块标签 给你的空白标签加上clear：both
+	3 .clearFix:after{display:block;conter:' '，clear:both;zoom:1}
+
+	使用:把clearFix 加在你要清除浮动的标签注意是类名 class=“clearFix"
+	
+
+透明度：opacity:0.5
+盒子模型：
+		margin 外边界
+		margin-left
+		margin-right
+		margin-top
+		margin-bottom
+	缩写
+		margin：0  auto;上下为零 左右居中
+		margin:	10px; 代表的时候四边
+		margin: 10px 20px 代表 上下10		 左右 20
+		margin: 10px 20px 30px		上10 左右20 下30
+		margin: 10px 30px 40px 50px		上下左右
+
+	padding 内边距
+	
+	border
+	content
+	
+
+选择器重点：
+	ID选择器:他是唯一的，以后留着js来使用,首先给标签起名，你想修饰的那个标签直接#ID名
+	CLASS选择器:
+				给标签起名，你想修饰的时候.class名字
+				它可以写多个class名字用空格隔开
+	
+	标签选择器:
+			  直接在style标签里就可以选择到
+			  组合选择器
+	#id名字，.class名字，标签名字{}
+	层级选择器:一层一层的往下找
+	#box div
+
+	伪类选择器:
+			a:link//链接的时候默认的字体颜色，向未被访问的链接添加样式
+			
+			a:visited//访问过后的字体颜色，向已被访问的链接添加样式
+			
+			a:active//当你鼠标点击的时候，向被激活的元素添加样式
+			
+			a:hover//鼠标悬停上面的时候，就是说鼠标移入的时候，向鼠标悬停在上方的元素的添加样式
+			
+			a:after	//在元素之后添加内容
+			
+			a:before	//在元素之前添加内容
+			
+			a:focus  //向拥有输入焦点的元素添加样式
+			
+			a:lang 	//向带有指定lang属性的元素添加样式
+			
+			a:first-child  //向元素添加样式，且该元素是它的父元素的第一个子元素
+			
+			a:line   //向文本的第一行添加样式
+			
+			a:first-letter   //向文本的第一个字母添加样式
+
+宽度自适应
+        	元素宽度设置为100%
+        	2元素具备最小的高度的自适应
+	        	min-height属性：最小高度；
+	        	max-height:最大高度；
+	        	min-width：最小宽度；
+	        	max-width：最大宽度；
+	        	min-height:自动延申。
+        	3、高度自适应
+	        	1、元素高度自适应窗口高度
+	        	设置方法；html,body{height:100%;}
+	        	需要自适应的元素：height:100%;
+	        	2、自适应元素高度：
+	        	父元素：height:value;
+	        	需要自适应父元素高度的子元素：height:100%;
+        	
+        	height:auto,是指根据块内内容自动调节高度。
+        	height:100%,是指其相对父块级高度而定义的高度，也就是按照离他最近且右定义高度的父层的高度来定义高度。
+        	
+
+表单字段集
+        	语法:<fieldset></fieldset>
+        	说明：相当于一个方框，在字段集中可以包含文本和其他元素。该元素用于对表单中的元素进行分组并在文档中区别标出文本。
+        	fieldset元素可以嵌套，在其内部可以设置多个fieldset对象。disabled定义空间禁制可用。
+        	
+        	字段集标题
+        	语法：<legend></legend>
+        	说明:legend元素可以在fieldset对象绘制的方框内插入一个标题。
+        	     legend元素必需是fieldset内的第一个元素。
+        	     
+弹性盒
+        	弹性盒是css3的一种新的布局方式。
+        	css3弹性盒（Flexble Box或flebox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当行为的布局方式。
+        	引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的子元素进行排列、对齐和分配空白空间。
+        	弹性盒子由弹性容器（Fle container）和弹性子元素（Flex item）组成。
+        	弹性容器通过设置display属性的值为flex将其定义为弹性容器。
+        	弹性容器内包含了一个或多个弹性子元素。
+        	
+        	主轴（main axis）：伸缩容器的主轴，伸缩项目主要沿着这条轴进行排列布局。他不一定是水平的；这主要取决于"justify-content"属性。
+        	主轴起点（main-start）和主轴终点（main-end）：		伸缩项目放置在伸缩容器内从主轴起点（main-start）向主轴终点（main-start）方向。
+        	主轴尺寸（main-size）：	伸缩项目在主轴方向的宽度或高度就是主轴的尺寸。伸缩项目主要的大小属性要么是宽度，要么是高度属性，由哪一个对着主轴方向决定。
+        	
+        	侧轴（cross axis）：	垂直于主轴称为侧轴。他的方向主要取决于主轴方向。
+        	侧轴起点（cross-start）和侧轴终点（cross-end）：	伸缩行的配置从容器的侧轴起点边开始，往侧轴终点边结束。
+        	侧轴尺寸（cross size）：伸缩项目的在侧轴方向的宽度或高度就是项目的侧轴长度，伸缩项目的侧轴长独属性是[width]和[height]属性，由哪一个对着侧轴方向决定。
+        	
+        	由于flexbox是一个整体模块，而不是单一的一个属性，它涉及到了很多的东西，包括他的整个属性集。他们之中有一些是在父容器上设置，而有一些则是在子容器上设置。
+        	以下属性设在容器上：diaplay		flex-direction		flex-wrap		flex-flow
+        					  justify-content			align-items			align-content
+        	
+        	语法：display:flex/inline-flex;
+        	说明：弹性容器	通过设置display属性的值为flex或inline-flex将其定义为弹性容器。
+	        	flex：将对象作为弹性伸缩盒展示。
+	        	inline-flew：将对象作为内联块级弹性伸缩盒展示。
+        	
+        	语法：flew-direction:row/row-reverse/column/column-reverse;
+        	说明：设置伸缩盒主轴的     起点和终点位置    ，子元素依然按照从主轴起点向终点方向排列。
+	        	row：默认位置，主轴横向，起点在左侧，终点在右侧。
+	        	row-reverse：主轴横向反转，起点在右侧，终点在左侧。
+	        	column：主轴纵向，起点在上方，终点在下方。
+	        	column-reverse：主轴纵向反转，起点在下方，终点在上方。
+        	
+        	flex-wrap:nomrap/wrap/wrap-reverse;
+        	说明：设置或检索伸缩盒对象的子元素超出父容器时是否       换行。
+	        	nowrap：当子元素溢出父容器时不换行。
+	        	wrap：当子元素溢出父容器时自动换行。
+	        	wrap-reverse：反转wrap排列。
+        	
+        	语法：justify-content:flex-start/flex-end/center/space-between/space-around;
+        	说明：设置或检索弹性盒子元素在主轴方向上的     对齐方式    。
+	        	当弹性盒里一行上的所有子元素都不能伸缩或已经达到最大值时，这一属性可协助对多余的空间进行分配。
+	        	当元素溢出某行时，这一属性同样会在对齐上进行控制。
+	        	space-between：弹性盒子元素会    平均分布      在行里。
+	        	space-around：弹性盒子元素会平均地分布在行里，   两端保留子元素与子元素之间 间距大小的一半。
+	        	
+			语法：flex-grow:<number> (default 0);
+        	说明：设置或检索弹性盒的扩展比率。根据弹性盒子元素所设置的扩展因子作为比率来分配剩余空间。
+	        	<number>：用数值来定义扩展   "比率"   。不允许负值。
+	        	flex-grow的默认值为0，如果没有显示定义该属性，是不会拥有分配剩余空间的权力的。
+        	
+        	语法：flex-basis:<length>/auto (default auto);
+        	说明：设置或检索弹性盒伸缩基准值
+	        	auto：无特定宽度值，取决于其他属性值
+	        	<length>：用长度值来定义宽度。不允许负值。
+	        	<percentage>：用百分比来定义宽度。不允许负值。
+        		
+        	语法：flex:none  /  [flex-grow]/[flex-shrink]/[flex-basis];
+        	说明：复合属性。
+	        	设置或  检索伸缩盒对象  的子元素如何分配空间。
+	        	建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。
+	        	flex用于合并指定flex-grow和flex-shrink和flex-basis属性，默认值为 0 1 auto。如果缩写flex:1，则其计算值为：1 1 0，auto等价于11auto，none等价于00auto。
+        	[flex-grow]：定义弹性盒子元素的	扩展比率。
+        	[flex-shrink]：定义弹性盒子元素的	 收缩比率。
+        	[flex-basis]：定义弹性盒子元素的	默认基准值。
+        	
+        	语法：oeder:<integer>;
+        	说明：设置或检索弹性盒模型对象的子元素出现的顺序。
+        		<integer>：用整数值来定义排列顺序，数值小的排在前面。可以为负值。
+        		
+        	语法：align-self:auto/flex-start/flex-end/center/baseline/stretch;
+        	说明：用于设置弹性元素自身在侧轴方向上的对齐方式。
+	        	auto：如果'align-self'的值为'auto'，则其计算值为元素的父元素的'align-items'值，如果其没有父元素，则计算机为'strech'。
+	        	flex-start：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴起始边界。
+	        	flex-end：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠该行的侧轴结束边界。
+	        	center：弹性盒子在该行的侧轴（纵轴）上居中放置。(如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度)。
+	        	baseline：如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其他情况下，该值将参与基线对齐。
+	        	stretch：如果指定侧轴大小的属性值为'auto',则其值会使用项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照'min/max-width/height'属性的限制。
+	        	
+服务器端字体
+        	在CSS3之前，页面所使用的字体已经在客服端中被安装才能正常显示，在样式中准许指定当前字体不能正常显示时使用的替代字体，但是如果这个替代字体在客服端中也没有安装时，使用这个字体的文字就不能正常显示了。
+        	为了解决这个问题，在CSS3中，新增了Web Fonts功能，网页中可以使用安装在服务器端的字体，只要某个字体在服务器端已经安装，网页中就能正常显示了。
+        	
+        	语法：@font-face
+        	说明：
+        	@font-face{
+        		font-family:WebFont;
+        		src:url("fonts/Fontin_Sans_B_45b.otf")format("opentype");
+        	}
+        	div{font-family:WebFont;}
+        	WebFont用来声明使用服务端的字体。
+        	format用来声明字体文件的格式，可以省略文件格式的声明而单独使用src属性值。
+        	字体文件的格式有OpenType与TrueType，前者的属性值为Opentype，后者的属性值为truetype；前者的文件扩展名为.otf，后者的为.ttf
+        	
+媒体查询
+        	媒体查询可以让我们根据设备显示器的特性（如视口宽度、屏幕比例、设备方向：横向或纵向）为其设定css样式，媒体查询由媒体类型和一个或多个检测媒体特性的条件表达式组成。
+        	媒体查询中可用于检测的媒体特性有width、height和color（等）。使用媒体查询，可以在不改页面内容的情况下，为特定的一些输出设备定制显示效果。
+        	
+        	语法一：
+        	@media mediatype and/not/only (media feature){
+        		CSS-Code;
+        	}
+        	语法二：
+        	针对不同的媒体使用不同stylesheets
+        	<link rel="stylesheet" media="mediatype and/not/only (mediafeature)" href="mystylesheet.css">
+        		media query 语法格式中支持设备如下：
+        		all					适用于所有设备
+        		aural				适用于语音和音频合成器
+        		braille				适用于触觉反馈设备
+        		embossed			适用于凸点文字（盲文）印刷设备
+        		handheld			适用于小型或者手提设备
+        		print				适用于打印机
+        		projection			适用于投影图像，如幻灯片
+        		sceen				适用于计算机显示器（最常用的一个）
+        		tty					适用于使用 固定间距 字符格 的设备，如电传打字机和终端
+        		ty					适用于电视类设备
+        		
+百分比（弹性）布局的原理及应用。
+        	2、rem（等比缩放）布局的原理及应用
+        							16px  1em  100%  12pt
+        	1、百分比（弹性）布局的原理及应用
+        	弹性布局（100%）布局的特点：1、顶部与底部的bar不管分辨率怎么变，他的高度和位置都不变；
+        						2、中间的每条信息不管分辨率怎么变，图标信息都位于条目的左边，薪资都位于右边。
+        						
+        	px为单位
+        	在web页面初期制作中，我们都是使用“px”来设置我们的文本，因为他比较稳定和精确。但是这种方法存在一个为题，当用户在浏览器中浏览我们制作的web页面时，他改变了浏览器的字体大小，这时
+        	会使用我们的web页面布局被打破。这样对于那些关心自己网站可用性的用户来说，就是一个大问题了。因此，这时就提出了使用“em”来定义web页面的字体。
+        	
+        	em为单位
+        	前面说了，使用使“px”为单位是比较方便，而又一致，但在浏览器中放大或缩放浏览页面时会存在一个问题，要解决这个问题，我们可以用em单位。
+        	
+        	rem
+        	rem（font size of the root elemment)是指相对于根元素的字体大小的单位。简单来说他就是一个	相对单位	。看到rem 大家一一定会想起em单位，
+        	 em（font size of the element)是指相对于父元素的字体大小的单位。他们之间其实很相似，只不过一个	计算的规则      是   依赖  根元素  计算 。(参考设置的HTML：px)
+        	rem能等比例适配所有屏幕
+        	rem是通过根元素进行适配的，网页中的根元素指的是html 我们通过设置html的字体大小就可以控制rem的大小。
+        	
+div中的图片间隙
+        	描述：在div中插入图片时，图片会将div下方撑大3像素。
+        	hack1:将</div>和<img>写在一行上；
+        	hack2：将<img>转为块元素，给<img>添加声明：display:block;
+        	双倍浮向(双倍边距)
+        	IE:给浮动元素添加声明：_display：inline；
+        	!important:最高声明，最优先执行。
+        	IE7以上：*
+        	
+html新增元素			
+			*语法<header></header>
+        	说明：header元素表示页面中一个内容区块或者整个页面的标题。
+        	
+        	*语法：<footer></footer>
+        	说明：footer元素表示整个页面或者页面中的一个内容区块的注脚。
+        	一般来说，他会包含创作者的姓名、创作日以及创作者的联系信息
+        	
+        	*语法：<article></article>
+        	说明：article元素表示页面中的一块与上下文不相关的独立内容，比如博客中的一篇文章或者报纸中的一篇文章。
+        	
+        	*语法：<aside></aside>
+        	说明：aside元素表示article元素的内容之外的，与article元素的内容相关的辅助信息。
+        	
+        	*语法：<section></section>
+        	说明：section元素表示页面中的一个内容区块，比如章节、页眉、页脚或者页面中的其他重要部分。它可以与h1~h6等元素结合起来使用，标示文档结构。
+        	
+        	*语法：<nav></nav>
+        	说明：nav元素表示页面中导航链接的部分。
+        	
+        	*语法：<figure></figure>
+        	说明：
+        		figure元素表示一段独立的流内容，一般表示文档主体流内容中的一个独立单元。使用  figcaption 元 素为figure元素   添加标题
+        		figure是一种元素的组合，带有可选标题。用来表示网页上一块独立的内容。
+        		figcaption表示figure的标题。从属于figure，并且figure中只能放置一个figcaption
+        	
+        	*语法：<mark></mark>
+        	说明：mark元素主要用来在视觉上向用户呈现那些需要突出或者高亮显示的文字。
+        		 mark元素的一个比较典型的应用就是在搜索结果中向用户高亮显示搜索关键词。
+        		 
+伪类选择器
+        	2、结构性伪类选择器
+        	1语法：:first-child 与  :last-child
+        	说明：单独指定第一个子元素  和  最后一个子元素的样式。
+        	
+        	2语法：:nth-child 与  :nth-last-child
+        	说明：对指定序号的子元素使用样式。
+        	
+        	3对所有第"奇数"个子元素或者第"偶数"个子元素使用样式。
+        	:nth-child(odd){}//所有正数下第"奇数"个子元素
+        	
+        	:nth-child(even){}//所有正数下第“偶数”个子元素
+        	
+        	:nth-last-child(odd){}//所有倒数上去第“奇数”个子元素
+        	
+        	:nth-last-child(even){}//所有倒数上去第“偶数”个子元素
+        	
+        	4语法：:nth-of-type  与    :nth-last-of-type
+        	说明：使用这两种选择器时，CSS3在计算子元素是第“奇数”个子元素还是第“偶数”个子元素的时候，就只针对同类型的子元素进行计算了。
+        	
+        	5语法：:nth-child(an+b)
+        	说明：循环使用样式，an+b 形式， a表示每次循环中共包括几种样式，b表示指定的样式在循环中所处的位置。
+        	
+        	6语法：:only-child
+        	说明：只有一个元素的时候使用。
+        	
+        	3、目标伪类选择器
+        	语法：:target
+        	说明：突出显示活动的HTML 锚
+        	URL 带有后面跟有 锚名称# ，指向文档内某个具体的元素。这个被链接的元素就是目标元素(target element)。
+        	:target 选择器可用于选取当前活动的目标元素。
+        	使用该选择器来对页面中的某个target元素（该元素的id当作页面中的超链接来使用）指定样式，
+        	该样式只在用户点击了页面中的超链接，并且跳转到target元素后起作用。
+        	
+        	4、层级选择器
+        	语法：E>F{sRules}
+        	说明：子元素选择器（Child selectors）只能选择作为某元素 子元素 的元素，选择匹配的F元素，且匹配的F元素为所匹配的E元素的子元素。
+        	
+        	语法：E+F{sRules}
+        	说明：相邻兄弟选择器可以选择紧接在另一个元素后的元素，而且他们具有一个相同的父元素，EF两元素具有一个相同的父元素，而且F元素在E元素后面，而且相邻。
+        	
+        	语法：E~F{sRules}		(通用)
+        	说明：用来指定定位于同一个父元素之中的某个元素之后的所有其他某个种类的兄弟元素所使用的样式。
+        	
+        	CSS规范可以在CSS属性前增加各自的浏览器前缀
+        	-webkit-
+        	-moz-
+        	-ms-
+        	-o-
+属性选择器
+        	1、属性选择器
+        	1语法：E[att]{sRules}
+        	说明：用于选取带有指定属性的元素。
+        	
+        	2语法：E[att="val"]{sRules}
+        	说明：用于选取带有指定属性和值的元素。
+        	
+        	3语法：E[att~="val"]{sRules}
+        	说明：用于选取属性值中包含指定词汇的元素。
+        	
+        	4语法：E[att|="val"]{sRules}
+        	说明：用于选取带有以指定值开头的属性值的元素，该值必须是整个单词。
+        	
+        	5语法：E[att^="val"]{sRules}
+        	说明：匹配属性值以指定值开头的每个元素。
+        	
+        	6语法：E[att$="val"]{sRules}
+        	说明：匹配属性值以指定值结尾的每个元素。
+        	
+        	7语法：E[att*="val"]{sRules}
+        	说明：匹配属性值中包含指定值的每个元素。
+        	
+2D变形
+        	transform字面上就是变形，改变的意思。
+        	在CSS3中transform主要包括以下几种：旋转rotate、扭曲skew、缩放scale、和 移动translate 以及 矩阵变形matrix。
+        	
+        	语法：transform:none/rotate/scale/skew/translate/matrix;
+        	说明：none：表示不进行变换；
+        	可以同时对一个元素进行transform的多种属性操作，例如rotate、scale、translate三种，但transform中使用多个属性时却需要有空格隔开。
+        	
+        	旋转rotate
+        	rotate()：通过指定的角度参数对原元素指定一个2D rotation（2D旋转），需先有transform-origin属性的定义。
+        	transform-origin定义的是旋转的基点，其中angle是指旋转角度，如果设置的值为正数表示顺时针旋转，如果设置的值为负数，则表示逆时针旋转。
+        	如：transform:rotate(30deg);
+        	
+        	移动translate
+        	移动translate我们分为三种情况:
+        	translate(x,y)水平方向和垂直方向同时移动（也就是X轴和Y轴同时移动）；
+        	translateX(x)仅水平方向移动（X轴移动）；
+        	translateY(y)仅垂直方向移动（Y轴移动0;
+        	如：transform:translate(100px,20px);		transform:translateX(100px);		transform:translateY(20px);
+        	
+        	缩放scale
+        	缩放scale和移动translate时极其相似，他也具有三种情况：
+        	缩放(x,y)使元素水平方向和垂直方向同时缩放（也就是X轴和Y轴同时缩放）；
+        	scaleX(x)元素仅为水平方向缩放（X轴缩放）；
+        	scale(y)元素仅垂直方向缩放（Y轴缩放），但它们具有相同的缩放中心点和基数，其中心点就是元素的中心位置，缩放基数为1，如果其值大于1元素就放大，反之其值小于1，元素缩小。
+        	如：transform:scale(2,1.5);		transform:scaleX(2);		transform:scaleY(2);
+        	
+        	扭曲skew
+        	扭曲skew和translate、scale一样具有三种情况：skew(x,y)使元素在水平和垂直方向同时扭曲（X轴和y轴同时按一定的角度值就行扭曲变形）；
+        	SkewX(x)仅使元素在水平方向扭曲变形(X轴扭曲变形)；
+        	SkewY(y)仅使元素在水平方向扭曲变形(Y轴扭曲变形)。
+        	如：transform:skew(30deg,10deg);			transform:skewX(30deg);		transform:skewY(10deg);
+        	
+        	改变元素基点transform-origin
+        	transform-origin主要作用是在进行transform动作之前可以改变元素的基点位置，因为元素默认基点就是其中心位置，
+        	没有使用transform-origin改变元素基点位置的情况下，transform进行的rotate，translate，scale，skew，matrex都是以元素自己中心位置进行变化的。
+        	但有时候需要在不同的位置对元素进行这些操作，那么就可以使用transform-origin来对元素进行基点位置改变，使元素基点不在是中心位置，以达到需要的基点位置。
+        	语法：transform-origin:x-axis y-axis;
+        	说明：默认点是元素的中心点。
+        	其中X和Y的值可以是百分值，em，px，其中X也可以是字符参数值left，center，right；Y和X一样除了百分值外还可以设置字符值top，center，bottom，这个看上去有点像
+        	background-position设置一样。
+        	
+CSS3过渡
+        	通过CSS3，我们可以在不使用Flash动画或JavaScript的情况下，当元素从一种样式变成另一种样式时为元素添加效果。
+        	IE10、Firefox、Chrome以及transition属性。
+        	Safari需要前缀-webkit-。
+        	IE9以及更早的版本，不支持transition属性。
+        	Chrome25以及更早的版本，需要前缀-webkit-。
+        		要实现这一点，必须规定两项内容：
+        		1规定你希望把效果添加到哪个CSS属性上
+        		2规定效果的时长
+        	下面列出了所有的转换属性：
+        		属性											描述
+        	transition							简写属性，用于在一个属性中设置中设置四个过渡属性。
+        	
+        	transition-property					规定应用过渡的CSS属性的名称。
+        	
+        	transition-duration					定义过渡效果花费的时间，默认是0.
+        	
+        	transition-timing-function			规定过渡效果的时间曲线，默认是“ease”
+        	
+        	transition-delay					规定过渡效果何时开始，默认是0.
+        	
+        	语法：transition-property:none/all/property;
+        	说明：transition-property属性规定应用效果的CSS属性的名称。当指定的CSS属性改变时，过渡效果将开始。
+        	none：没有属性会获得过渡效果。
+        	all：所有属性都将获得过渡效果。
+        	property：定义应用过渡效果的CSS属性名称列表，列表以逗号分隔。
+        	
+        	语法：transition-duration:time;
+        	说明：transition-duration属性规定完成过渡效果需要花费的时间，以秒货毫秒计算。
+        	time：规定完成过渡效果需要花费的时间，以秒或毫秒计。默认值时是0，意味着不会有效果。
+        	
+        	语法：transition-timing-function:linear/ease/ease-in/ease-out/ease-in-out/cubic-bezier(n,n,n,n);
+        	说明：transition-timing-function属性规定过渡效果的速度曲线。
+        	linear：规定以相同速度开始至结束的过渡效果。
+        	ease：规定慢速开始，然后变快，然后慢速结束的过渡效果。
+        	ease-in：规定以慢速开始的过渡效果。
+        	ease-out：规定以慢速结束的过渡效果。
+        	ease-in-out：规定以慢速开始和结束的过渡效果。
+        	cubic-bezier(n,n,n,n)：在cubin-bezier函数中定义自己的值。可能的值是0至1之间的数值。
+        	【对比网址】cubic-bezier.com
+        	
+        	语法：transition-delay:time;
+        	说明：transition-delay属性规定过渡效果何时开始。
+        	time：规定在过渡效果开始之前需要等待的时间，以秒或毫秒计。
+        	
+3D效果
+        	3D位移
+        	在CSS3中3D位移主要包括两种函数translateZ()和translate3d().
+        	translate3d()函数使一个元素在三维空间移动。这种变形的特点是，使用三维向量的坐标定义元素在每个方向移动多少。
+        	随着px的增加，直观效果上：
+        	X：从左向右移动
+        	Y：从上向下移动
+        	Z：以方框中心为原点，变大
+        	
+        	3D旋转
+        	在三维变形中，我们可以让元素在任何轴旋转。为此，CSS3新增三个旋转函数：rotateX()、rotateY()、和rotateZ()。
+        	随着度数的增加，直观效果上：
+        	X：以方框X轴，从下向上旋转
+        	Y：以方框Y轴，从左向右旋转
+        	Z：以方框中心为原点，顺时针旋转
+        	
+        	3D缩放
+        	通过使用3D缩放函数，可以让元素在Z轴上按比例缩放。默认值为1，当值大于1时，元素放大，反之小于1大于0.01时，元素缩小。
+        	当scale3d()中X轴和Y轴同时为1，即scale3d(1,1,sz),其效果等同于scaleZ(sz)。
+        	随着放大倍数的增加，直观效果上：
+        	X；以方框Y轴，左右变宽
+        	Y：以方框X轴，上下变高
+        	Z：看不出变换。scaleZ()和scale3d()函数单独使用时没有任何效果。
+        	
+        	3D Transform转换属性
+        	属性							描述
+        	transform					向元素应用2D或3D转换
+        	transform-origin			允许你改变被转换元素的位置。
+        	transform-style				规定被嵌套元素如何在3D空间中显示
+        	perspective					规定3D元素的透视效果
+        	perspective-origin			规定3D元素的底部位置
+        	backface-visibility			定义元素在不面对屏幕时是否可见
+        	
+        	语法：transform-origin:X-axis y-axis z-axis;
+        	说明：变形的原点。
+        	默认情况，变形的原点在元素的中心点，或者是元素X轴和Y轴的50%处。
+        	
+        	语法：transform-style:flat/presreve-3d;
+        	说明：规定如何在3D空间中呈现被嵌套的元素。
+        	flat：子元素将不保留其3D位置。
+        	preserve-3d：子元素将保留其3D位置。
+        	
+        	perspective属性：透视，视角
+        	perspective取值为none或不设置，就没有真3D空间。
+        	perspective取值越小，3D效果就越明显，也就是你的眼睛越靠近真3D.
+        	perspective的取值无穷大，或值为0时与取值为none效果一样。
+        	/perspective可以写在元素本身上，对于一张画布只有一个变形体的时候，几乎没有差别。但是当一个画布上有多个变形体的时候，两种写法地差别就表现出来了。
+        	
+        	语法：perspective-origin:x-axis y-axis;
+        	说明：定义元素所基于的X轴和Y轴。该属性允许你改变3D元素的底部位置。该属性的默认值为“50%50%”（也就是center）。
+        	他可以时长度值（以受支持的长度单位表示）、百分比或以下三个关键词之一：left（表示在包边框的X轴方向长度的0%），center（表示中间的点），或right(表示长度的100%)。
+        	第一个长度值指定于相对元素的包含框的X轴上的位置。
+        	第二个长度值指定相对于元素的包含框的Y轴上的位置。
+        	
+        	语法：backface-visibiliy:visible/hidden;
+        	说明：定义元素当不面向屏幕时是否可见。如果旋转元素不希望看到其背面时，该属性很有用。
+        	visible：为backface-visibiliy的默认值，表示反面可见
+        	hidden：表示反面不可见
+        	
+CSS3动画
+        	第一种叫过渡（transition）动画，就是从初始状态过渡到结束状态这个过程中所产生的动画。所谓的状态就是指大小、位置、颜色、变形（transform）等等这些属性。
+        	
+        	第二种叫做关键帧（keyframes）动画。不同于第一种的过渡动画只能定义首尾两个状态，关键帧动画可以定义多个状态，或者用关键帧来说的话，过渡动画只能定义第一帧
+        	和最后一帧，而关键动画则可以定义任意多的关键帧，因而能实现更复杂的动画效果。
+        	
+        	通过@keyfrmes规则，你能创建动画。		创建动画的原理是，将一套CSS样式逐渐变化成为另一套样式。		在动画过程中，你能够多次改变这套CSS样式。
+        	以百分比来规定改变发生的时间，或者通过关键词"form"和"to"，等价于0%和100%。0%是动画的开始时间，100%动画结束时间。为了获得最佳的浏览器支持，你应该
+        	始终定义0%和100%选择器。
+        	当你在@keyfrmes中创建动画时，请把他捆绑到某个选择器，否则不会产生动画效果。	通过规定至少以下两项CSS3动画属性，即可将动画绑定到选择器：规定动画的
+        	名称；规定动画的时长
+        	
+        	*语法：keyframes animation name{
+        	 	keyframes-selector{css-style;}
+        	 	}
+        	 说明：
+        	 animationname：声明动画的名称。
+        	 keyframes-selector：用来划分动画的时长，可以是用百分比形式，也可以使用"form"和"to"的形式。
+        	 "form"和"to"的形式等价于于0%和100%。
+        	 建议始终使用百分比形式。
+        	 
+        	 @keyframes规则和所有动画属性
+        	 属性							描述
+        	 animation						所有动画属性的简写属性，除了animation-play-state属性。
+        	 animation-name					规定@keyframes动画的名称。
+        	 animation-duration				规定动画完成一个周期所花费的秒或毫秒。默认是0.
+        	 animation-timing-function		规定3D元素的透视效果。
+        	 animation-delay				规定动画何时开始。默认是0.
+        	 animation-iteration-count		规定动画被播放的次数。默认是1.
+        	 
+        	 语法：animation-name:keyframename/none;
+        	 说明：animation-name属性为@keyframes动画规定名称。
+        	 keyframename:规定需要绑定到选择器的keyframe的名称。
+        	 none：规定无动画效果。
+        	 
+        	 语法：animation-duration:time;
+        	 语法：animation-duration属性定义动画完成一个周期所需要的时间，以秒或毫秒计。
+        	 time:规定完成动画所需要的时间。默认值是0，意味着没有动画效果。
+        	 
+        	 语法：animation-timing-function:value;
+        	 说明：
+        	 animation-timing-function 规定动画的速度曲线。
+        	 linear：动画从头到尾的速度是相同的。
+        	 ease：默认。动画以低速开始，然后加快，在结束前变慢。
+        	 ease-in：动画以低速开始。
+        	 ease-out：动画以低俗结束。
+        	 ease-in-out：动画以低俗开始和结束。
+        	 cubic-bezier(n,n,n,n)：在cubic-bezier函数中自己的值。可能的值是从0到1的数值。
+        	 
+        	 语法：animation-delay:time;
+        	 说明：
+        	 animation-delay 属性定义动画何时开始
+        	 animation-delay 值以秒或毫秒计。
+        	 time：可选。定义动画开始前等待的时间，以秒或毫秒计。默认值是0.
+        	 
+        	 语法：animation-iteration-count:n/infinite;
+        	 说明：
+        	 animation-iteration-count属性定义动画的播放次数。
+        	 n：定义动画播放次数的数值
+        	 infinite：规定动画应该无限次播放。
+        	 
+        	 语法：animation-direction:normal/alternate;
+        	 说明：animation-direction 属性定义是否应该轮流反向播放动画。
+        	 如果animation-direction值是"alternate",则动画会在奇数次数（1、3、5等等）正常播放，而在偶数次数（2、4、6等等）向后播放。
+        	 normal：默认值。动画应该正常播放。
+        	 alternate：动画应该轮流反向播放。
+        	 
+        	 语法：animation-paly-state:paused/running;
+        	 说明：animation-play-state 属性规定动画正在运行还是暂停。
+        	 注释：你可以在javascript中使用该属性，这样就能在播放过程中暂停动画。
+        	 paused：规定动画已暂停。
+        	 running：规定动画正在播放。

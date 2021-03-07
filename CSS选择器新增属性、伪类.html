@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		/*语法1*/
+		.nav1 li:first-child{background-color:#00FFFF;}
+		.nav1 li:last-child{background-color:#00FF00;}
+		/*语法2*/
+		.nav1 li:nth-child(2){background-color:#0000FF;}
+		.nav1 li:nth-last-child(2){background-color:#685649;}
+		/*语法3*/
+		.nav2 li:nth-child(odd){background-color:#FFC0CB;}
+		.nav2 li:nth-child(even){background-color:#BBBBBB;}
+		/*语法4*/
+		.nav3 li:nth-of-type(odd){background-color:#FFC0CB;}
+		.nav3 li:nth-of-type(even){background-color:#BBBBBB;}
+		/*语法5*/
+		.nav4 li:nth-child(2n+5){background-color:#0000FF;}
+		.nav4 li:nth-of-type(2n){background-color:#00FF00;}
+		/*语法6*/
+		li:only-child{background-color:#FFC0CB;}
+		/*目标伪类选择器*/
+		:target{background-color:#FF9900;}
+		/*层级选择器*/
+		.box3,.box4{width:600px;border:2px #008000 solid;margin-bottom:20px;}
+		.box3,span{color:#FFC0CB;}
+		.box3>span{color:#0f0;}
+		
+		.nav1 li+li{font-size:100px;}
+		
+		.nav1 .ol+li{font-family:LuSu,KaiTi;}
+		</style> 
+	</head>
+	<body>
+		<!--
+        	作者：offline
+        	时间：2020-12-19
+        	描述：伪类选择器
+        	2、结构性伪类选择器
+        	1语法：:first-child 与  :last-child
+        	说明：单独指定第一个子元素  和  最后一个子元素的样式。
+        	
+        	2语法：:nth-child 与  :nth-last-child
+        	说明：对指定序号的子元素使用样式。
+        	
+        	3对所有第"奇数"个子元素或者第"偶数"个子元素使用样式。
+        	:nth-child(odd){}//所有正数下第"奇数"个子元素
+        	
+        	:nth-child(even){}//所有正数下第“偶数”个子元素
+        	
+        	:nth-last-child(odd){}//所有倒数上去第“奇数”个子元素
+        	
+        	:nth-last-child(even){}//所有倒数上去第“偶数”个子元素
+        	
+        	4语法：:nth-of-type  与    :nth-last-of-type
+        	说明：使用这两种选择器时，CSS3在计算子元素是第“奇数”个子元素还是第“偶数”个子元素的时候，就只针对同类型的子元素进行计算了。
+        	
+        	5语法：:nth-child(an+b)
+        	说明：循环使用样式，an+b 形式， a表示每次循环中共包括几种样式，b表示指定的样式在循环中所处的位置。
+        	
+        	6语法：:only-child
+        	说明：只有一个元素的时候使用。
+        	
+        	3、目标伪类选择器
+        	语法：:target
+        	说明：突出显示活动的HTML 锚
+        	URL 带有后面跟有 锚名称# ，指向文档内某个具体的元素。这个被链接的元素就是目标元素(target element)。
+        	:target 选择器可用于选取当前活动的目标元素。
+        	使用该选择器来对页面中的某个target元素（该元素的id当作页面中的超链接来使用）指定样式，
+        	该样式只在用户点击了页面中的超链接，并且跳转到target元素后起作用。
+        	
+        	4、层级选择器
+        	语法：E>F{sRules}
+        	说明：子元素选择器（Child selectors）只能选择作为某元素 子元素 的元素，选择匹配的F元素，且匹配的F元素为所匹配的E元素的子元素。
+        	
+        	语法：E+F{sRules}
+        	说明：相邻兄弟选择器可以选择紧接在另一个元素后的元素，而且他们具有一个相同的父元素，EF两元素具有一个相同的父元素，而且F元素在E元素后面，而且相邻。
+        	
+        	语法：E~F{sRules}		(通用)
+        	说明：用来指定定位于同一个父元素之中的某个元素之后的所有其他某个种类的兄弟元素所使用的样式。
+        	
+        	CSS规范可以在CSS属性前增加各自的浏览器前缀
+        	-webkit-
+        	-moz-
+        	-ms-
+        	-o-
+        -->
+        <h1>列表A</h1>
+        <ul class="nav1">
+        	<li class="ol">列表项目1</li>
+        	<li class="ol">列表项目2</li>
+        	<li class="ol">列表项目3</li>
+        	<li class="ol">列表项目4</li>
+        	<li class="ol">列表项目5</li>
+        	<li class="ol">列表项目6</li>
+        	<li class="ol">列表项目7</li>
+        	<li class="ol">列表项目8</li>
+        	<li class="ol">列表项目9</li>
+        	<li class="ol">列表项目10</li>
+        </ul>
+        <h1>列表B</h1>
+        <ul class="nav2">
+        	<li>列表项目1</li>
+        	<li>列表项目2</li>
+        	<li>列表项目3</li>
+        	<li>列表项目4</li>
+        	<li>列表项目5</li>
+        	<li>列表项目6</li>
+        	<li>列表项目7</li>
+        	<li>列表项目8</li>
+        	<li>列表项目9</li>
+        	<li>列表项目10</li>
+        </ul>
+        <h1>列表C</h1>
+        <ul class="nav3">
+        	<li>列表项目1</li>
+        	<h2>long</h2>
+        	<li>列表项目2</li>
+        	<li>列表项目3</li>
+        	<li>列表项目4</li>
+        	<li>列表项目5</li>
+        	<li>列表项目6</li>
+        	<li>列表项目7</li>
+        	<li>列表项目8</li>
+        	<li>列表项目9</li>
+        	<li>列表项目10</li>
+        </ul>
+        <h1>列表D</h1>
+        <ul class="nav4">
+        	<li>列表项目1</li>
+        	<li>列表项目2</li>
+        	<li>列表项目3</li>
+        	<li>列表项目4</li>
+        	<li>列表项目5</li>
+        	<li>列表项目6</li>
+        	<li>列表项目7</li>
+        	<li>列表项目8</li>
+        	<li>列表项目9</li>
+        	<li>列表项目10</li>
+        	<li>列表项目1</li>
+        	<li>列表项目2</li>
+        	<li>列表项目3</li>
+        	<li>列表项目4</li>
+        	<li>列表项目5</li>
+        	<li>列表项目6</li>
+        	<li>列表项目7</li>
+        	<li>列表项目8</li>
+        	<li>列表项目9</li>
+        	<li>列表项目10</li>
+        </ul>
+        <h1>列表E</h1>
+        <ul class="nav5">
+        	<li>项目一</li>
+        </ul>
+        <!--目标伪类选择器-->
+        <hr />
+        <a href="#text1">示例文字1</a>
+        <a href="#text2">示例文字2</a>
+        <div id="text1">
+        	<h1>示例文字1</h1>
+        	<p>此处放内容</p>
+        </div>
+        <div id="text2">
+        	<h1>示例文字1</h1>
+        	<p>此处放内容</p>
+        </div>
+        <!--层级选择器-->
+        <div class="box3"><span>有了目标是好事，但是要找到正确的方法</span>
+		<h1>你可以模拟一个项目自己做练习，例如，模拟可口可乐的APP专题页设计，这种素材网上非常多。</h1>
+		<h3>参加你<i>感兴<span>趣的职业，找到职业</span>中最好</i>的导师</h3>
+		在兴趣群里参加设计师比赛，或者和好同学一起互相学习，可以一起看视频，有问题可以互相讨论，这样能起到互相促进的效果</div>
+		<div class="box4"><span>有了目标是好事，但是要找到正确的方法</span>
+		<h1>你可以模拟一个项目自己做练习，例如，模拟可口可乐的APP专题页设计，这种素材网上非常多。</h1>
+		<h3>参加你<i>感兴<span>趣的职业，找到职业</span>中最好</i>的导师</h3>
+		在兴趣群里参加设计师比赛，或者和好同学一起互相学习，可以一起看视频，有问题可以互相讨论，这样能起到互相促进的效果</div>
+	</body>
+</html>

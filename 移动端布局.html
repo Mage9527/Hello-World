@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>移动端布局</title>
+		<style type="text/css">
+			/*.box{font-size:12px;}
+			@media screen and (min-width:1200px) {
+				input {width:200px;height:100px;background: #00f;color:#fff;font-size:48px;}
+			}
+			@media screen and (min-width:800px) and (max-width:1200px) {
+				input {width:150px;height:80px;background: #00f;color:#fff;font-size:36px;}
+			}
+			@media screen and (max-width:800px) {
+				input {width:100px;height:50px;background: #00f;color:#fff;font-size:24px;}
+			}*/
+			@media screen and (min-width:1200px) {
+				html {font-size:48px;}
+			}
+			@media screen and (min-width:800px) and (max-width:1200px) {
+				html {font-size:36px;}
+			}
+			@media screen and (max-width:800px) {
+				html {font-size:24px;}
+			}
+			input{width:3rem;height:2rem;background:#00f;color:#fff;font-size:1rem;border:none;}
+			.box{width:10rem;height:5rem;background:#0f0;font-size:.5rem;}
+		</style>
+	</head>
+	<body>
+		<!--
+        	作者：offline
+        	时间：2020-12-29  04.50
+        	描述：
+        	1、百分比（弹性）布局的原理及应用。
+        	2、rem（等比缩放）布局的原理及应用
+        							16px  1em  100%  12pt
+        	1、百分比（弹性）布局的原理及应用
+        	弹性布局（100%）布局的特点：1、顶部与底部的bar不管分辨率怎么变，他的高度和位置都不变；
+        						2、中间的每条信息不管分辨率怎么变，图标信息都位于条目的左边，薪资都位于右边。
+        						
+        	px为单位
+        	在web页面初期制作中，我们都是使用“px”来设置我们的文本，因为他比较稳定和精确。但是这种方法存在一个为题，当用户在浏览器中浏览我们制作的web页面时，他改变了浏览器的字体大小，这时
+        	会使用我们的web页面布局被打破。这样对于那些关心自己网站可用性的用户来说，就是一个大问题了。因此，这时就提出了使用“em”来定义web页面的字体。
+        	
+        	em为单位
+        	前面说了，使用使“px”为单位是比较方便，而又一致，但在浏览器中放大或缩放浏览页面时会存在一个问题，要解决这个问题，我们可以用em单位。
+        	
+        	rem
+        	rem（font size of the root elemment)是指相对于根元素的字体大小的单位。简单来说他就是一个	相对单位	。看到rem 大家一一定会想起em单位，
+        	 em（font size of the element)是指相对于父元素的字体大小的单位。他们之间其实很相似，只不过一个	计算的规则      是   依赖  根元素  计算 。(参考设置的HTML：px)
+        	rem能等比例适配所有屏幕
+        	rem是通过根元素进行适配的，网页中的根元素指的是html 我们通过设置html的字体大小就可以控制rem的大小。
+        -->
+		<!--
+        	作者：offline
+        	时间：2020-12-29
+        	描述：
+        -->
+        <h1>背景</h1>
+        <div class="box"><h1>背景</h1></div>
+        <input type="submit" />
+	</body>
+</html>

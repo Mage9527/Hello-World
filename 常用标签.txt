@@ -1,0 +1,39 @@
+&nbsp 不换行空格		&gt;右尖括号	&it;左尖括号	&copy;备案中图标
+border-radius:50% 图的形状
+../上一级目录
+解决浮动高度塌陷
+方法一：给父级元素添加声明overflow:hidden;
+方法二：在浮动元素下方添加空div，并给该元素添加声明：
+clear:both;height:0;overflow:hidden(或font-size:0)
+居中方法：
+		text-align:center		在父容器里水平居中inline文字，或inline元素
+		vertical-align:middle	垂直居中inline文字、inline元素，配合dispaly:table		,	display:table-cell,有奇效
+		line-height				与height联手，垂直居中文字
+		margin:auto				
+		示例
+		#ex2_container{width:200px;background-color:yellow;}
+		#ex2_content{margin:0 auto;background-color:gray;color:white;display:table;}
+		
+		hacks,hacks（小技巧）
+		有许多hacks，负margin，
+		
+		translate(-50%,-50%)
+		用position加translate translate(-50%,-50%)比较奇特，百分比计算不是以父元素为基准，而是以自己为基准。
+		
+		绝对定位居中
+		父容器元素：position:relative
+		.Absolute-Center{
+			width:50%;
+			height:50%;
+			overflow:auto;
+			margin:auto;
+			position:absolute;
+			top:0;left:0;bottom:0;right:0;
+		}
+		注意：高度必须定义，建议加overflow:auto,放止内容溢出。
+		
+		视口居中
+		内容元素：position:fixed,	z-index:999,	记住父容器元素position:relative
+		
+		响应式
+		百分比宽度，最大最小宽度均可以，加padding也可以

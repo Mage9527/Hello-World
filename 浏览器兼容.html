@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width:1600px;background:#FF9900;
+			}
+			.box img{display: block;}
+		</style>
+	</head>
+	<body>
+		<!--
+        	作者：offline
+        	时间：2020-12-15
+        	描述：图片间隙
+        	div中的图片间隙
+        	描述：在div中插入图片时，图片会将div下方撑大3像素。
+        	hack1:将</div>和<img>写在一行上；
+        	hack2：将<img>转为块元素，给<img>添加声明：display:block;
+        -->
+        <div class="box">
+        	<img src="../images/2 (1).jpeg" /> 
+        </div>
+        <!--
+        	作者：offline
+        	时间：2020-12-15
+        	描述：双倍浮向(双倍边距)
+        	IE:给浮动元素添加声明：_display：inline；
+        	!important:最高声明，最优先执行。
+        	IE7以上：*
+        -->
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			.box{width:1000px;height:300px;background-color:#eee;margin:0 auto;}
+			p{width:200px;height:200px;border:1px #000 solid;float:left;margin:50px;transform-style:preserve-3d;perspective:900px;}
+			span{display:block;width:200px;height:200px;background-color:rgba(255,0,0,.5);}
+			p:nth-child(1) span:hover{transform:rotateX(45deg);}/*在hover前面不写span属性，得到图形X/Y轴变小*/
+			p:nth-child(2) span:hover{transform:rotateY(-45deg);}
+			p:nth-child(3) span:hover{transform:rotateZ(10000deg);transition:all 10s;}
+		</style>
+	</head>
+	<body>
+		<!--
+        	作者：offline
+        	时间：2020-12-22-12:41
+        	描述：
+        	3D位移
+        	在CSS3中3D位移主要包括两种函数translateZ()和translate3d().
+        	translate3d()函数使一个元素在三维空间移动。这种变形的特点是，使用三维向量的坐标定义元素在每个方向移动多少。
+        	随着px的增加，直观效果上：
+        	X：从左向右移动
+        	Y：从上向下移动
+        	Z：以方框中心为原点，变大
+        	
+        	3D旋转
+        	在三维变形中，我们可以让元素在任何轴旋转。为此，CSS3新增三个旋转函数：rotateX()、rotateY()、和rotateZ()。
+        	随着度数的增加，直观效果上：
+        	X：以方框X轴，从下向上旋转
+        	Y：以方框Y轴，从左向右旋转
+        	Z：以方框中心为原点，顺时针旋转
+        	
+        	3D缩放
+        	通过使用3D缩放函数，可以让元素在Z轴上按比例缩放。默认值为1，当值大于1时，元素放大，反之小于1大于0.01时，元素缩小。
+        	当scale3d()中X轴和Y轴同时为1，即scale3d(1,1,sz),其效果等同于scaleZ(sz)。
+        	随着放大倍数的增加，直观效果上：
+        	X；以方框Y轴，左右变宽
+        	Y：以方框X轴，上下变高
+        	Z：看不出变换。scaleZ()和scale3d()函数单独使用时没有任何效果。
+        	
+        	3D Transform转换属性
+        	属性							描述
+        	transform					向元素应用2D或3D转换
+        	transform-origin			允许你改变被转换元素的位置。
+        	transform-style				规定被嵌套元素如何在3D空间中显示
+        	perspective					规定3D元素的透视效果
+        	perspective-origin			规定3D元素的底部位置
+        	backface-visibility			定义元素在不面对屏幕时是否可见
+        	
+        	语法：transform-origin:X-axis y-axis z-axis;
+        	说明：变形的原点。
+        	默认情况，变形的原点在元素的中心点，或者是元素X轴和Y轴的50%处。
+        	
+        	语法：transform-style:flat/presreve-3d;
+        	说明：规定如何在3D空间中呈现被嵌套的元素。
+        	flat：子元素将不保留其3D位置。
+        	preserve-3d：子元素将保留其3D位置。
+        	
+        	perspective属性：透视，视角
+        	perspective取值为none或不设置，就没有真3D空间。
+        	perspective取值越小，3D效果就越明显，也就是你的眼睛越靠近真3D.
+        	perspective的取值无穷大，或值为0时与取值为none效果一样。
+        	/perspective可以写在元素本身上，对于一张画布只有一个变形体的时候，几乎没有差别。但是当一个画布上有多个变形体的时候，两种写法地差别就表现出来了。
+        -->
+        <div class="box">
+        	<p><span>X轴旋转</span></p>
+        	<p><span>Y轴旋转</span></p>
+        	<p><span>Z轴旋转</span></p>
+        </div>
+	</body>
+</html>

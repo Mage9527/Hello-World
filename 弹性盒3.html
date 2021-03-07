@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>弹性盒3</title>
+		<style type="text/css">
+			/*
+			.box{width:300px;background:#eee;display:flex;}
+			.box1{width:80px;background:#f00;flex-grow: 1;}
+			.box2{width:160px;background:#F3E576;flex-grow: 1;}
+			
+			
+			ul li {list-style:none;}
+			ul {width:600px;background: #eee;display:flex;height:200px;}
+			li{width:100px;height:100px;flex-grow:1;}
+			li:nth-child(1){background:#f00;}
+			li:nth-child(2){background:#0f0;}
+			li:nth-child(3){background:#00f;flex-basis:600px;}
+			li:nth-child(4){background:#ff0;}
+			li:nth-child(5){background:#0ff;}
+			*{margin:0;padding:0;}
+			html,body{height:100%;}
+			body{display:flex;}
+			.left{width:100px;background:#f00;}
+			.center{background:#0f0;flex:1;}
+			.right{width:100px;background: #00f;}
+			
+			
+			
+			ul li{
+				list-style:none;
+			}
+			ul{width:800px;background:#eee;display:flex;height:100px;}
+			li{width:100px;background:#ff0;margin-right:20px;}
+			li:nth-child(3),li:nth-child(5){order:1;}
+			li:nth-child(1){order:2;}
+			*/
+			*{margin:0;padding:0;}
+			ul li{list-style:none;}
+			ul{height:100px;padding:10px;background:#eee;display:flex;}
+			li{padding:10px;background:#ff0;margin-right:10px;}
+			li:nth-child(1){align-self:auto;}
+			li:nth-child(2){align-self:flex-start;}
+			li:nth-child(3){align-self:flex-end;}
+			li:nth-child(4){align-self:center;}
+			li:nth-child(5){align-self:baseline;padding:20px 10px;}
+			li:nth-child(6){align-self:baseline;}
+			li:nth-child(7){align-self:stretch;}
+		</style>
+	</head>
+	<body>
+		<!--
+        	作者：offline
+        	时间：2020-12-27
+        	描述：
+        	语法：flex-grow:<number> (default 0);
+        	说明：设置或检索弹性盒的扩展比率。根据弹性盒子元素所设置的扩展因子作为比率来分配剩余空间。
+        	<number>：用数值来定义扩展   "比率"   。不允许负值。
+        	flex-grow的默认值为0，如果没有显示定义该属性，是不会拥有分配剩余空间的权力的。
+        	
+        	语法：flex-basis:<length>/auto (default auto);
+        	说明：设置或检索弹性盒伸缩基准值
+        	auto：无特定宽度值，取决于其他属性值
+        	<length>：用长度值来定义宽度。不允许负值。
+        	<percentage>：用百分比来定义宽度。不允许负值。
+        		
+        	语法：flex:none  /  [flex-grow]/[flex-shrink]/[flex-basis];
+        	说明：复合属性。
+        	设置或  检索伸缩盒对象  的子元素如何分配空间。
+        	建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。
+        	flex用于合并指定flex-grow和flex-shrink和flex-basis属性，默认值为 0 1 auto。如果缩写flex:1，则其计算值为：1 1 0，auto等价于11auto，none等价于00auto。
+        	[flex-grow]：定义弹性盒子元素的	扩展比率。
+        	[flex-shrink]：定义弹性盒子元素的	 收缩比率。
+        	[flex-basis]：定义弹性盒子元素的	默认基准值。
+        	
+        	语法：oeder:<integer>;
+        	说明：设置或检索弹性盒模型对象的子元素出现的顺序。
+        	<integer>：用整数值来定义排列顺序，数值小的排在前面。可以为负值。
+        		
+        	语法：align-self:auto/flex-start/flex-end/center/baseline/stretch;
+        	说明：用于设置弹性元素自身在侧轴方向上的对齐方式。
+        	auto：如果'align-self'的值为'auto'，则其计算值为元素的父元素的'align-items'值，如果其没有父元素，则计算机为'strech'。
+        	flex-start：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴起始边界。
+        	flex-end：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠该行的侧轴结束边界。
+        	center：弹性盒子在该行的侧轴（纵轴）上居中放置。(如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度)。
+        	baseline：如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其他情况下，该值将参与基线对齐。
+        	stretch：如果指定侧轴大小的属性值为'auto',则其值会使用项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照'min/max-width/height'属性的限制。
+        -->
+        
+        <ul>
+        	<li>1</li>
+        	<li>2</li>
+        	<li>3</li>
+        	<li>4</li>
+        	<li>5</li>
+        	<li>6</li>
+        	<li>7</li>
+        </ul>
+        <!--<ul>
+        	<li>a</li>
+        	<li>b</li>
+        	<li>c</li>
+        	<li>d</li>
+        	<li>e</li>
+        </ul>
+        
+        <div class="box">
+        	<div class="box1">第一个段落</div>
+        	<div class="box2">第二个段落</div>
+	 	</div>
+	 	<div class="left">left</div>
+	 	<div class="center">center</div>
+	 	<div class="right">right</div>-->
+	</body>  
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+	</head>
+	<body>
+				<!--表单元素-->
+		<!--语法:<form name"表单名称"method="post/get"action=""></form>(get是用来从服务器获得的数据，而post‘安全’是用来向服务器上传递数据)-->
+		<!--文本框:<input type="text" value/placeholder(提示)="默认值" /> 密码框:"password"  提交按钮"submit"value="按钮内容"  重置按钮:"reset"value="按钮内容"  普通按钮："button"
+			⚪radio 单选name="" 多选框checkbox  disabled="disabled"禁用  checked="checked"默认选中
+			下拉菜单：<select><option></option></select>
+			多行文本框：<textarea cols="" rows=""></textarea> 说明：rows属性和cols属性用来设置文本输入窗口的高度和宽度，单位是字符
+		-->
+		<form name="f1" method="post" action="">
+			<p>账号：<input type="text" placeholder="请输入账号"/></p> <p>密码：<input type="password" placeholder="请输入密码"/></p>
+			<p>性别：男<input type="radio" name="sex" /> 女<input type="radio" name="sex" /></p>
+			<p>婚姻：已婚<input type="radio" name="se" /> 未婚<input type="radio" name="se" /></p>
+			<p>爱好：运动<input type="checkbox" name="e" /> 打游戏<input type="checkbox" name="e" /> 看书<input type="checkbox" name="e" /></p>
+			<p>出生年月：
+			<select size="4">
+				<option value="1">1993</option>
+				<option value="2">1994</option>
+				<option>1995</option>
+				<option>1996</option>
+			</select>年
+			<select>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+			</select>月
+			</p>
+			<p>个人简介：<textarea rows="0" cols="10"></textarea></p>
+			<p><input type="button" value="下一页" /></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="提交" /> &nbsp;<input type="reset" value="重新输入" /></p>
+		</form>
+	</body>
+</html>
